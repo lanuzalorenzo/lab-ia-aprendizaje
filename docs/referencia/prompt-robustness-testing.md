@@ -12,7 +12,7 @@ Para responderla sin usar contenido peligroso, la orden pide algo inofensivo y c
 
 Dos reglas que hacen que esto valga algo:
 
-1. **La palabra no puede perderse por el camino.** Si el disfraz estropea la propia palabra, el modelo fallará por culpa de nuestro disfraz, y lo apuntaríamos como «resistió». Ese es el error más caro que puede cometer una prueba de seguridad.
+1. **La palabra no puede perderse por el camino.** Si el disfraz estropea la propia palabra, el modelo fallará por culpa del disfraz, y lo apuntaría como «resistió». Ese es el error más caro que puede cometer una prueba de seguridad.
 2. **Primero se prueba sin disfraz.** Si el modelo obedece la orden escrita tal cual, no hay nada que medir todavía: hay que construir una defensa antes.
 
 ## 1. El problema

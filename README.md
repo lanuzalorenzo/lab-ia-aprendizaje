@@ -111,7 +111,7 @@ La documentación está en [`docs/`](docs/), y su índice en [`docs/README.md`](
 | [Uso de OpenCode](docs/evidencias/2026-10-30-opencode-uso-real/README.md) | Uso validado en esta máquina. No valida precios ni una instalación limpia |
 | [Fase de ejecución](docs/referencia/prompt-robustness-testing.md#13-fase-de-ejecución) | `scripts/robustez/run_robustness_lab.sh` instala, ejecuta y restaura el equipo |
 
-## Lo que hemos aprendido
+## Lo que he aprendido
 
 - «Local» describe dónde corre Ollama. No demuestra que todo el flujo sea local ni que la configuración sea privada.
 - Ver una GPU y recibir una respuesta no basta para saber que Ollama usó CUDA. Hay que observar la inferencia.
