@@ -15,7 +15,7 @@ Laboratorio local de agentes de IA con Ollama y Continue, usado como herramienta
 
 ## Contrato editorial
 
-Español claro y directo, sin rótulos de registro. Estados explícitos (Validado · Parcial · Runbook preparado · Diseño · Pendiente). Evidencia y hallazgo van separados: un hallazgo no es un PASS. El contrato completo está en [portfolio-ciberseguridad-lorenzo](https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/blob/main/AGENTS.md).
+Español claro y directo, sin rótulos de registro. Estados explícitos (Validado · Parcial · Runbook preparado · Diseño · Pendiente). Evidencia y hallazgo van separados: un hallazgo no es un PASS. **Apertura llana:** todo documento de más de 80 líneas abre con dos o tres frases sin jerga y una comparación cotidiana, y aclara cada término en su primera aparición; si no cabe en una frase, va al glosario de la guía de lectura. La claridad no cambia lo que el documento afirma. El contrato completo está en [portfolio-ciberseguridad-lorenzo](https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/blob/main/AGENTS.md).
 
 ## Commits
 
