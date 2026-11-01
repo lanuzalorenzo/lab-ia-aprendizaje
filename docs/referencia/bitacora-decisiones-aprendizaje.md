@@ -1,6 +1,6 @@
 # Bitácora de decisiones y aprendizaje
 
-Este documento recoge, en orden cronológico, las decisiones, los problemas, sus causas y las soluciones del laboratorio. Sirve como memoria técnica, como guía para reinstalar el entorno y como punto de partida para decidir qué sigue.
+Un laboratorio sin cuaderno de bitácora obliga a repetir los mismos tropiezos cada pocos meses. Este documento es ese cuaderno: recoge, en orden cronológico, las decisiones, los problemas, sus causas y las soluciones del laboratorio. Sirve como memoria técnica, como guía para reinstalar el entorno y como punto de partida para decidir qué sigue.
 
 ## Índice de entradas
 

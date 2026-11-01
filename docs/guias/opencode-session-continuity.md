@@ -6,6 +6,8 @@
 
 ## 1. El problema
 
+Trabajar con un agente es como dejar una obra a medias: si nadie apunta dónde se quedó, el siguiente turno empieza preguntando o, peor, rehaciendo lo ya hecho.
+
 Una sesión de agente es efímera:
 
 - al cerrar el chat se pierde el hilo;
