@@ -51,6 +51,7 @@ Ejecuciones reales con artefactos congelados (JSON, huella de entorno, resultado
 | [`2026-10-26-robustez-prompt-v2/`](evidencias/2026-10-26-robustez-prompt-v2/) | Prompt `v2` endurecido frente a `v1`, N0. Obediencia 0,50 sin cambios: las instrucciones no defienden a este modelo. |
 | [`2026-10-30-inferencia-7b-continue/`](evidencias/2026-10-30-inferencia-7b-continue/) | Registro **Parcial**: integración 7B + Continue probada por el autor, sin artefacto reproducible. No es un PASS. |
 | [`2026-10-30-opencode-uso-real/`](evidencias/2026-10-30-opencode-uso-real/) | **Validado** el uso de OpenCode v2.1.4 en esta máquina: lectura del repositorio, consulta de documentación, escritura y enlaces. No valida precios ni instalación limpia. |
+| [`2026-11-02-coste-contexto-sesiones/`](evidencias/2026-11-02-coste-contexto-sesiones/) | **Validado** el reparto de coste de 30 días: el 98% de la entrada es relectura de caché y el razonamiento se factura como salida. **Pendiente** comparar variantes de razonamiento. |
 | [`plantilla-evidencia.md`](evidencias/plantilla-evidencia.md) | Plantilla para registrar nuevas evidencias de forma consistente |
 
 ---
