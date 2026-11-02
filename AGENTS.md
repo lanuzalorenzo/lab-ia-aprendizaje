@@ -19,7 +19,7 @@ El contrato completo —apertura llana, jerga, estados, evidencias y claridad qu
 
 ## Gobernanza
 
-`main` exige PR, los tres checks de CI, rama actualizada y una aprobación. El bypass está limitado a la cuenta del propietario; el resto necesita aprobación.
+`main` exige PR, los tres checks de CI y rama actualizada; solo el propietario fusiona.
 
 ## Commits
 
