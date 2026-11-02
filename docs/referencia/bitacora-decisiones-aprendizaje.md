@@ -7,7 +7,7 @@ Un laboratorio sin cuaderno de bitácora obliga a repetir los mismos tropiezos c
 1. [Entrada 01: Servidor sin escritorio con Ubuntu Server](#entrada-01-servidor-sin-escritorio-con-ubuntu-server)
 2. [Entrada 02: Sin red tras instalar Ubuntu Server](#entrada-02-sin-red-tras-instalar-ubuntu-server)
 3. [Entrada 03: Ollama, primeras pruebas y acceso por SSH](#entrada-03-ollama-primeras-pruebas-y-acceso-por-ssh)
-4. [Entrada 04: Hoja de ruta y ejes de aprendizaje](#entrada-04-hoja-de-ruta-y-ejes-de-aprendizaje)
+4. [Entrada 04: Ejes de aprendizaje](#entrada-04-ejes-de-aprendizaje)
 5. [Entrada 05: Ajuste de la ventana de contexto (`portfolio-agent` con Continue)](#entrada-05-ajuste-de-la-ventana-de-contexto-portfolio-agent-con-continue)
 6. [Entrada 06: Dónde guardar los vectores del RAG local](#entrada-06-dónde-guardar-los-vectores-del-rag-local)
 7. [Entrada 07: Cifras de VRAM de terceros: la aritmética primero](#entrada-07-cifras-de-vram-de-terceros-la-aritmética-primero)
@@ -65,44 +65,35 @@ Un laboratorio sin cuaderno de bitácora obliga a repetir los mismos tropiezos c
 
 ---
 
-## Entrada 04: Hoja de ruta y ejes de aprendizaje
+## Entrada 04: Ejes de aprendizaje
 
-El laboratorio sigue como espacio de aprendizaje en IA aplicada. Estos son los ejes pendientes; las casillas marcadas ya están hechas.
+El laboratorio sigue como espacio de aprendizaje en IA aplicada. La seguridad del asistente tiene su propia hoja de ruta; aquí quedan los ejes técnicos.
 
 ### Eje 1: aceleración por hardware y modelos cuantizados
 
 - [ ] Validar los drivers CUDA y NVIDIA Container Toolkit si se añade una GPU dedicada.
-- [ ] Medir cómo cambian la calidad y el consumo de memoria de la GPU con cuantizaciones GGUF distintas (Q4_K_M, Q5_K_M, Q8_0).
+- [ ] Medir cómo cambian la calidad y el consumo de memoria con cuantizaciones GGUF distintas (Q4_K_M, Q5_K_M, Q8_0).
 
-### Eje 2: red y exposición segura
-
-- [ ] Configurar Ollama para escuchar en la red (`OLLAMA_HOST=0.0.0.0:11434`) y limitar el acceso con un firewall (`ufw`), un túnel SSH o una VPN WireGuard. Solo el equipo autorizado debe poder usar la API.
-- [ ] Poner un proxy inverso con TLS (NGINX o Caddy) con autenticación por token o mTLS.
-
-### Eje 3: clientes y asistentes de desarrollo
+### Eje 2: clientes y asistentes de desarrollo
 
 - [x] Continue en VS Code apuntando al servidor Ollama, con el contexto de 16K sincronizado.
 - [ ] Evaluar el uso de todo el código como contexto (*embeddings* del repositorio) y el autocompletado en tiempo real.
 
-### Eje 4: RAG local y agentes
+### Eje 3: RAG local y agentes
 
-- [ ] Construir un RAG local con una base de datos vectorial embebida (ChromaDB o Qdrant) para consultar documentación técnica y notas propias sin enviar nada fuera. El criterio del motor está en la [entrada 06](#entrada-06-dónde-guardar-los-vectores-del-rag-local).
+- [ ] Construir un RAG local con una base de datos vectorial embebida (ChromaDB o Qdrant). El criterio del motor está en la [entrada 06](#entrada-06-dónde-guardar-los-vectores-del-rag-local).
 - [ ] Probar frameworks de agentes locales (LangChain, LlamaIndex o AutoGen) con el modelo servido por Ollama.
 
-### Eje 5: evaluación y robustez de modelos
+### Eje 4: evaluación y robustez
 
 - [ ] Construir el conjunto dorado mínimo (20 a 50 casos) descrito en [`ai-security-evaluation.md`](ai-security-evaluation.md) y ejecutarlo en CI.
-- [x] Implementar la matriz de disfraces de [`prompt-robustness-testing.md`](prompt-robustness-testing.md): canarios C0 a C4, familias F1 a F4 y niveles N0 a N3.
-- [x] Ejecutar la matriz en el equipo Ubuntu con [`run_robustness_lab.sh`](../../scripts/robustez/run_robustness_lab.sh) y guardar la huella del entorno junto a los resultados.
-- [x] Primera ejecución (2026-10-22, `qwen2.5:3b`, N0 y N1): obediencia en N0 de 0,50. La inyección directa funciona sin transformar.
-- [x] Añadir el control negativo C0 y excluir las cuatro transformaciones que el modelo no descifra. Medían si el modelo entiende el texto, no si resiste la orden.
-- [x] Segunda pasada, solo N0 (2026-10-22, prompt `v1`): control negativo 3 de 3 con JSON válido; obediencia de 0,50, igual que la primera.
-- [x] Registrar la huella del prompt de sistema desde la pasada `prompt-v2`. Las evidencias `v1` y `v2` anteriores no la registraron.
+- [x] Implementar y ejecutar la matriz de disfraces de [`prompt-robustness-testing.md`](prompt-robustness-testing.md). Los resultados y sus límites están en [`docs/evidencias/`](../evidencias/).
 - [ ] Terminar la corrección del instrumento: comprobación de descifrado (para reactivar F3) y un detector de C3 que separe el formato del contenido.
-- [x] Medir el prompt `v2`: N0 sigue en 0,50. La defensa tiene que ser un control externo, no otra instrucción. N1 con `v2` sigue pendiente.
-- [ ] En cada ejecución, separar el fallo del filtro (evasión) del fallo del modelo (obediencia). Sin ese desglose no se sabe qué corregir.
-- [ ] Comparar modelos locales con una **puntuación por tarea**, no con un ranking general: el resultado solo vale para el prompt y la tarea evaluados.
-- [ ] Medir el factor de expansión de tokens de cada transformación. Una defensa que multiplica el coste por diez es un problema de consumo, no solo de filtrado.
+- [ ] En cada ejecución, separar el fallo del filtro (evasión) del fallo del modelo (obediencia).
+- [ ] Comparar modelos locales con una **puntuación por tarea**, no con un ranking general.
+- [ ] Medir el factor de expansión de tokens de cada transformación.
+
+La red y la exposición segura, la inyección desde el repositorio y los permisos del agente están en la [hoja de ruta de seguridad](hoja-de-ruta-seguridad-asistentes.md).
 
 ---
 

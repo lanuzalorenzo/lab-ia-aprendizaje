@@ -1,4 +1,4 @@
-# Inferencia local frente a cloud: criterios de decisión
+# Inferencia local frente a cloud: criterios y flujo del laboratorio
 
 > **Estado:** Parcial — criterios documentados y experiencia de uso propia. No es un benchmark ni una comparación de rendimiento medida.
 >
@@ -40,14 +40,37 @@ La respuesta puede ser distinta para cada flujo. En este laboratorio, el trabajo
 
 El laboratorio usa dos flujos con el mismo cliente, OpenCode:
 
-1. **Remoto para el trabajo diario:** OpenCode Go. Es el que usamos a diario por sus límites y por la disponibilidad de modelos. Antes de enviarle código, hay que revisar su política de privacidad vigente.
+1. **Remoto para el trabajo diario:** OpenCode Go. Es el que uso a diario por sus límites y por la disponibilidad de modelos. Antes de enviarle código, hay que revisar su política de privacidad vigente.
 2. **Local para lo que no puede salir de la red:** Ollama en un servidor dedicado, para código o datos que no deben salir de la red del laboratorio.
 
 El flujo local dejó de ser la opción por defecto. Montarlo y ajustarlo consumía demasiado tiempo, y su capacidad no cubría el trabajo diario. Ahora solo se usa cuando el dato lo exige. Ver [bitácora, entrada 08](../referencia/bitacora-decisiones-aprendizaje.md#entrada-08-trabajo-diario-con-opencode-go-y-local-para-datos-restringidos).
 
 La decisión no es permanente: se revisa cuando cambia el dato, el coste o la capacidad. Lo importante es que la configuración deje claro qué proveedor usa cada flujo y que no se mezclen datos sensibles con el flujo remoto.
 
-Ver [`CASE_STUDY_OPENCODE_MIGRATION.md`](../../docs/referencia/CASE_STUDY_OPENCODE_MIGRATION.md).
+### Configuración del flujo local
+
+Se define en `opencode.json`. Sustituye `ollama.lab.local` por el nombre o la dirección de tu servidor:
+
+```jsonc
+{
+  "$schema": "https://opencode.ai/config.json",
+  "providers": {
+    "ollama": {
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "http://ollama.lab.local:11434/v1"
+      },
+      "models": {
+        "qwen2.5-coder:7b": {
+          "name": "Qwen 2.5 Coder 7B (local)"
+        }
+      }
+    }
+  }
+}
+```
+
+El flujo remoto no necesita nada en el archivo: se conecta dentro de OpenCode con `/connect`. Las claves nunca van en `opencode.json` ni en el repositorio.
 
 ## 5. Errores frecuentes
 
@@ -71,6 +94,13 @@ Para cada flujo, dejar escrito:
 
 Una decisión sin fecha de revisión se convierte en deuda.
 
-## 7. Límites
+## 7. Lecciones del cambio de flujo
+
+1. Separar flujos evita enviar código sensible a un proveedor por comodidad.
+2. Los límites de uso pesan tanto como la privacidad: un flujo que se queda corto acaba sin usarse.
+3. La seguridad depende de la red y de la gestión de claves, no solo de que el modelo corra en local.
+4. La documentación debe distinguir configuración, ejecución y medición.
+
+## 8. Límites
 
 Este documento no compara modelos concretos ni publica latencias o costes medidos. Para eso hace falta ejecutar la misma carga en ambos entornos y conservar los resultados. Mientras no exista esa medición, las cifras son estimaciones o criterios, no evidencias.

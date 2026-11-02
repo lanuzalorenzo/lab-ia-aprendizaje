@@ -44,7 +44,7 @@ Decidir qué herramienta usar como agente de código en este laboratorio, sin as
 
 ## 4. OpenCode Go vs consola/CLI
 
-- **OpenCode Go**: suscripción que da acceso a modelos gestionados. Es el que usamos a diario: en límites y disponibilidad de modelos ha funcionado mejor que los planes gratuitos y los de pago por uso que probamos antes (experiencia propia, no medida). Algunos modelos gestionados pueden usar datos de la petición según la política vigente; no se ha verificado en este repositorio. Revisar la política antes de usarlos con código o datos sensibles.
+- **OpenCode Go**: suscripción que da acceso a modelos gestionados. Es el que uso a diario: en límites y disponibilidad de modelos ha funcionado mejor que los planes gratuitos y los de pago por uso que probé antes (experiencia propia, no medida). Algunos modelos gestionados pueden usar datos de la petición según la política vigente; no se ha verificado en este repositorio. Revisar la política antes de usarlos con código o datos sensibles.
 - **CLI/TUI y web**: interfaces al mismo servicio. La CLI/TUI permite trabajar en terminal y servidores remotos; la web facilita la gestión visual. La configuración y las sesiones son compartidas.
 - **Modelos locales (Ollama)**: no requieren suscripción ni salen a la nube. Los reservamos para código o datos que no pueden salir de la red. Para el trabajo diario dejaron de ser la opción: montarlos y ajustarlos consumía mucho tiempo, y sus límites de capacidad se quedaban cortos.
 
@@ -56,7 +56,7 @@ Regla práctica: si el código o los datos no deben salir del equipo, usa modelo
 - **VS Code + Copilot/agentes** cuando la productividad en el editor sea prioritaria y la política de datos del proveedor sea aceptable.
 - **Antigravity** cuando ya estés en el ecosistema Google y su política de datos encaje con tu caso.
 
-En este laboratorio, la herramienta es OpenCode. Para el trabajo diario usamos OpenCode Go; los modelos locales quedan para código y datos que no pueden salir de la red. La trazabilidad viene de las sesiones y de los archivos versionados, no del modelo.
+En este laboratorio, la herramienta es OpenCode. Para el trabajo diario uso OpenCode Go; los modelos locales quedan para código y datos que no pueden salir de la red. La trazabilidad viene de las sesiones y de los archivos versionados, no del modelo.
 
 ## 6. Límites
 
