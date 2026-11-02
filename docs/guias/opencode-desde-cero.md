@@ -4,9 +4,9 @@
 
 > Para quién: si nunca has usado un agente de código en la terminal. No hace falta saber programar a fondo.
 
-Esta guía cuenta cómo llegamos a OpenCode, qué es y cómo empezar. Está escrita desde el uso, no desde el manual.
+Esta guía cuenta cómo llegué a OpenCode, qué es y cómo empezar. Está escrita desde el uso, no desde el manual.
 
-## Cómo llegamos aquí
+## Cómo llegué aquí
 
 Todo empezó por los límites.
 
@@ -191,3 +191,4 @@ En este repositorio:
 - [Continuidad de sesiones con OpenCode](opencode-session-continuity.md): cómo no perder el contexto entre sesiones.
 - [Inferencia local frente a cloud](local-vs-cloud.md): criterios para decidir dónde corre el modelo.
 - [OpenCode frente a VS Code y Antigravity](../referencia/opencode-vs-vscode-antigravity.md): comparación por privacidad, coste y control.
+- [Ejercicio de lectura de un repositorio](../../examples/code-reading-demo.md): una tarea acotada para probar el modelo local.
