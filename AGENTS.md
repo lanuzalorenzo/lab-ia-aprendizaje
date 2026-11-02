@@ -17,6 +17,10 @@ Laboratorio local de agentes de IA con Ollama y Continue, usado como herramienta
 
 El contrato completo —apertura llana, jerga, estados, evidencias y claridad que no cambia lo que se afirma— está en [portfolio-ciberseguridad-lorenzo](https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/blob/main/AGENTS.md). En este repo: español claro, estados explícitos (Validado · Parcial · Runbook preparado · Diseño · Pendiente) y evidencia separada del hallazgo; un hallazgo no es un PASS.
 
+## Gobernanza
+
+`main` exige PR, los checks de CI en verde y una aprobación. El propietario es el único administrador y puede fusionar con bypass cuando no haya un segundo revisor; el resto de colaboradores necesita aprobación.
+
 ## Commits
 
 Formato: `type(scope): imperative summary in English`. Scopes: `docs`, `examples`, `scripts`, `config`, `repo`. Tipos: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`. Asunto imperativo, conciso y en inglés.
