@@ -64,3 +64,11 @@ Queda fuera: rankings de modelos, *AI red teaming* genérico, certificaciones, R
 ## 6. Decisión de alcance
 
 La decisión por defecto es mantener un solo repositorio: la inferencia local es la plataforma y la seguridad de asistentes es el eje. Se separará solo si las fases 2–4 producen un cuerpo de evidencias y un público distintos, o si el mantenimiento del entorno de inferencia impide avanzar en seguridad. La decisión se toma en la Fase 5, no antes.
+
+## 7. Líneas aparcadas
+
+Dos ideas quedan escritas para no volver a abrirlas antes de tiempo. Ninguna tiene implementación ni ejecución.
+
+**Contenedores para el servicio de inferencia.** Un contenedor empaqueta Ollama y el modelo para levantarlos igual en cualquier equipo, con arranque automático y modelos en volúmenes fuera del contenedor. Falta comprobar que la GPU funciona dentro, decidir si sustituye a la instalación directa y medir si compensa. Se retomaría cuando haya que mover el servicio a otro equipo o reconstruirlo con frecuencia.
+
+**Equipo de agentes.** Varios agentes con papeles distintos (diseño, código, revisión, documentación) en cadena. Cada uno añade llamadas, tiempo y consumo, y un error pasa al siguiente. Sin una tarea repetitiva y un criterio para medir si el equipo supera a un agente solo, no tiene sentido montarlo.

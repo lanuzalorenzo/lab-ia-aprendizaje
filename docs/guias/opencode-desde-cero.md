@@ -16,7 +16,7 @@ Probamos OpenRouter con Continue en VS Code. Había modelos gratuitos, pero no e
 
 Después encontramos OpenCode. Intentamos usarlo con Ollama en local. Funcionaba, pero montarlo y ajustar el rendimiento costaba mucho tiempo.
 
-Pasamos a OpenCode Console y nos convenció, hasta que el proyecto creció y se quedaron sin créditos. Mientras tanto probamos a conectar Antigravity para seguir trabajando con OpenCode. Fue caótico: no nos dejaba trabajar bien. Acabamos en OpenCode Go, que es lo que usamos hoy. En límites y en disponibilidad de modelos ha funcionado mejor que todo lo anterior.
+Pasé a OpenCode Console y me convenció, hasta que el proyecto creció y se quedaron sin créditos. Mientras tanto probé a conectar Antigravity para seguir trabajando con OpenCode. Fue caótico: no me dejaba trabajar bien. Acabé en OpenCode Go, que es lo que uso hoy. En límites y en disponibilidad de modelos ha funcionado mejor que todo lo anterior.
 
 La lección que nos dejó el camino: el límite no lo marca solo la herramienta, sino cuánto trabajas. Y el modelo se puede cambiar sin cambiar la herramienta.
 

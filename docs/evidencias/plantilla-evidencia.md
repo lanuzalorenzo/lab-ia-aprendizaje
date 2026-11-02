@@ -1,6 +1,6 @@
 # Plantilla de Evidencia
 
-> **Uso:** Copia esta plantilla a una carpeta nueva bajo `docs/evidencias/` con nombre descriptivo (ej. `2026-10-23-nueva-evaluacion/`). Rellena cada sección. Elimina secciones que no apliquen.
+> **Uso:** Copia esta plantilla a una carpeta nueva bajo `docs/evidencias/` con el nombre `YYYY-MM-DD-descripcion-corta[-vN]` (por ejemplo, `2026-10-22-robustez-ejecucion-v2`). Rellena cada sección. Elimina secciones que no apliquen.
 
 ---
 

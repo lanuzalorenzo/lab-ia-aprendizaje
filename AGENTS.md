@@ -10,12 +10,12 @@ Laboratorio local de agentes de IA con Ollama y Continue, usado como herramienta
 - README de práctica de 240–310 palabras; `informe.md` solo si sostiene el contenido; `runbook.md` solo si es reejecutable; `bitacora/` solo con hechos nuevos.
 - En evaluación de IA, separa diseño y expectativas de resultados medidos; no presentes umbrales como resultados.
 - Lab independiente del lab final de ciberseguridad: si se enlaza desde el portfolio, el alcance y las evidencias van separados.
-- Decisiones, problemas y RCA en `docs/referencia/bitacora-decisiones-aprendizaje.md`; mantén allí la hoja de ruta (GGUF/CUDA, seguridad de red, integración de cliente, RAG).
+- El cuaderno de laboratorio (`docs/referencia/bitacora-decisiones-aprendizaje.md`) es una excepción declarada a la regla de no guardar registros: recoge hechos, fallos y decisiones del entorno local con fecha y resultado, y mantiene allí los ejes de aprendizaje (GGUF/CUDA, clientes, RAG). No se duplica en `bitacora/`. La seguridad del asistente vive en `docs/referencia/hoja-de-ruta-seguridad-asistentes.md`.
 - Sin secretos, credenciales ni datos personales.
 
 ## Contrato editorial
 
-Español claro y directo, sin rótulos de registro. Estados explícitos (Validado · Parcial · Runbook preparado · Diseño · Pendiente). Evidencia y hallazgo van separados: un hallazgo no es un PASS. **Apertura llana:** todo documento de más de 80 líneas abre con dos o tres frases sin jerga y una comparación cotidiana, y aclara cada término en su primera aparición; si no cabe en una frase, va al glosario de la guía de lectura. La claridad no cambia lo que el documento afirma. El contrato completo está en [portfolio-ciberseguridad-lorenzo](https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/blob/main/AGENTS.md).
+El contrato completo —apertura llana, jerga, estados, evidencias y claridad que no cambia lo que se afirma— está en [portfolio-ciberseguridad-lorenzo](https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/blob/main/AGENTS.md). En este repo: español claro, estados explícitos (Validado · Parcial · Runbook preparado · Diseño · Pendiente) y evidencia separada del hallazgo; un hallazgo no es un PASS.
 
 ## Commits
 

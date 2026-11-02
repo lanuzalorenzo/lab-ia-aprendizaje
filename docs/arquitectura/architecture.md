@@ -29,20 +29,13 @@ El flujo no implica que Continue solo envíe datos a Ollama ni que el contenido 
 
 | Artefacto | Qué contiene |
 |---|---|
-| `docs/referencia/bitacora-decisiones-aprendizaje.md` | Memoria técnica, decisiones de arquitectura, análisis causa-raíz y hoja de ruta |
-| `docs/guias/opencode-session-continuity.md` | Patrón de continuidad entre sesiones con comandos y archivos de estado |
-| `docs/referencia/ai-security-evaluation.md` | Marco de evaluación de calidad y seguridad de funciones con LLM |
-| `docs/guias/local-vs-cloud.md` | Criterios para decidir dónde ejecutar cada carga de trabajo |
-| `docs/guias/continue-remote-ollama-setup.md` | Sincronización de ventana de contexto 16K e integración de Continue con Ollama remoto |
-| `docs/guias/server-deployment-ubuntu-ollama.md` | Despliegue en servidor bare-metal headless (Ubuntu Server), Netplan y OpenSSH |
-| `docs/guias/gpu-setup.md` | Pasos de comprobación de GPU |
-| `docs/guias/troubleshooting.md` | Diagnóstico conservador |
+| `docs/` | Documentación del laboratorio; el índice está en [docs/README.md](../README.md) |
 | `config/Modelfile.portfolio-agent` | Definición declarativa del agente con prompt ligero y ventana de 16K tokens; no se ha ejecutado `ollama create` en este repositorio |
 | `config/ollama.service` | Unidad de referencia; su usuario, rutas, permisos y compatibilidad con GPU no se han validado aquí |
 | `scripts/instalacion/install_ollama.sh` | Instala Ollama utilizando el instalador remoto del proveedor |
 | `scripts/instalacion/gpu_check.sh` | Consulta servicio, logs y `nvidia-smi` |
 | `scripts/utilidades/run_agent.sh` | Abre una sesión interactiva de Ollama con el modelo definido en el script |
-| `examples/` | Ejemplos ilustrativos, sin evidencias de ejecución adjuntas |
+| `examples/code-reading-demo.md` | Ejercicio ilustrativo de lectura de un repositorio; sin evidencia de ejecución adjunta |
 
 ## Validación necesaria para una instalación concreta
 
