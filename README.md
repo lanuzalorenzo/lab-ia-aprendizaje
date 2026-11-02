@@ -4,8 +4,8 @@
 
 Laboratorio personal de **aprendizaje en IA**. Pruebo herramientas y formas de trabajar con agentes, comparo alternativas y cuento lo que pasa. El punto de partida fue la IA local, por privacidad y por límites de uso. Ahora el foco es aprender a elegir: qué herramienta, qué modelo y qué datos pueden salir de la red.
 
-> **Estado del repositorio (2026-10-30).**
-> - **Validado:** el instrumento de la prueba de robustez, y el uso de OpenCode en esta máquina.
+> **Estado del repositorio (2026-11-02).**
+> - **Validado:** la instalación de Ollama en el servidor del laboratorio (bitácora, entradas 01–03) y la inferencia con `qwen2.5:3b` (evidencia del 22 de octubre, en un entorno que el script instaló y desinstaló), el instrumento de la prueba de robustez, y el uso de OpenCode en esta máquina.
 > - **Parcial:** tres pasadas de robustez sobre `qwen2.5:3b`, y la integración de `qwen2.5-coder:7b` con Continue, probada por el autor pero sin registro reproducible.
 > - **Diseño:** firewall y TLS, evaluación de funciones con LLM, RAG y equipo de agentes.
 > - **Pendiente:** la fase 1 de la [hoja de ruta de seguridad](docs/referencia/hoja-de-ruta-seguridad-asistentes.md) (modelo `portfolio-agent` con digest fijado, y firewall) y los tres experimentos de seguridad de asistentes.
@@ -28,7 +28,7 @@ Dejar memoria técnica reproducible del entorno (procedimientos y diagnóstico),
 
 Un servidor sin escritorio (Ubuntu Server) ejecuta modelos con Ollama. Lo administras por SSH desde tu equipo, y tu editor (VS Code con Continue, u OpenCode) usa el modelo a través de la red. El modelo operativo es `qwen2.5-coder:7b`; también se probaron Llama 3 y Mistral al inicio, sin dejar registro.
 
-El montaje, la red y las comprobaciones están documentados como runbook, no como ejecución verificada. Antes de usar el laboratorio, revisa el estado en [`docs/README.md`](docs/README.md) y en el índice de evidencias.
+El montaje se hizo en el servidor. La guía de despliegue y la red están documentadas como runbook, no como ejecución verificada; el firewall sigue en Diseño. Antes de usar el laboratorio, revisa el estado en [`docs/README.md`](docs/README.md) y en el índice de evidencias.
 
 > **Ojo:** que el modelo corra en local garantiza que los datos no salen al proveedor del modelo. No garantiza que no haya fugas: hay que comprobar los puertos abiertos, el firewall y la configuración del cliente.
 
@@ -54,6 +54,7 @@ El índice completo está en [`docs/README.md`](docs/README.md). Para empezar:
 |---|---|
 | [Despliegue en Ubuntu Server](docs/guias/server-deployment-ubuntu-ollama.md) | Servidor sin escritorio, red, SSH y Ollama |
 | [Inferencia local frente a cloud](docs/guias/local-vs-cloud.md) | Criterios, flujo híbrido y configuración del modelo local |
+| [Continuidad de la IA local](docs/guias/continuidad-ia-local.md) | Qué conservar en disco para seguir trabajando sin proveedor remoto |
 | [OpenCode desde cero](docs/guias/opencode-desde-cero.md) | Qué es, por qué empezar con un modelo local y la primera sesión |
 | [Hoja de ruta de seguridad](docs/referencia/hoja-de-ruta-seguridad-asistentes.md) | Qué datos salen, qué obedece el asistente y qué puede tocar |
 | [Bitácora de decisiones](docs/referencia/bitacora-decisiones-aprendizaje.md) | Decisiones, problemas, causas y ejes de aprendizaje |

@@ -21,6 +21,7 @@ Procedimientos paso a paso para instalar, configurar y diagnosticar.
 | [`agents-md-publico-privado.md`](guias/agents-md-publico-privado.md) | Cómo organizar las instrucciones de un proyecto y el filtro antes de publicarlas |
 | [`opencode-session-continuity.md`](guias/opencode-session-continuity.md) | Patrón de continuidad entre sesiones con comandos y archivos de estado |
 | [`local-vs-cloud.md`](guias/local-vs-cloud.md) | Criterios de decisión, flujo híbrido y configuración del modelo local |
+| [`continuidad-ia-local.md`](guias/continuidad-ia-local.md) | Qué dejar en disco para seguir trabajando sin proveedor remoto; simulacro pendiente |
 | [`troubleshooting.md`](guias/troubleshooting.md) | Diagnóstico conservador de problemas frecuentes |
 
 ## Referencia (`referencia/`)
