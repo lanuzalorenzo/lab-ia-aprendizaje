@@ -19,7 +19,7 @@ El contrato completo —apertura llana, jerga, estados, evidencias y claridad qu
 
 ## Gobernanza
 
-`main` exige PR, los checks de CI en verde y una aprobación. El propietario es el único administrador y puede fusionar con bypass cuando no haya un segundo revisor; el resto de colaboradores necesita aprobación.
+`main` exige PR, los tres checks de CI, rama actualizada y una aprobación. El bypass está limitado a la cuenta del propietario; el resto necesita aprobación.
 
 ## Commits
 
