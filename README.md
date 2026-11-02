@@ -56,6 +56,7 @@ El índice completo está en [`docs/README.md`](docs/README.md). Para empezar:
 | [Inferencia local frente a cloud](docs/guias/local-vs-cloud.md) | Criterios, flujo híbrido y configuración del modelo local |
 | [Continuidad de la IA local](docs/guias/continuidad-ia-local.md) | Qué conservar en disco para seguir trabajando sin proveedor remoto |
 | [OpenCode desde cero](docs/guias/opencode-desde-cero.md) | Qué es, por qué empezar con un modelo local y la primera sesión |
+| [Programación agéntica](docs/referencia/programacion-agentica.md) | Dónde paga, qué riesgos añade y qué controles la hacen defendible |
 | [Hoja de ruta de seguridad](docs/referencia/hoja-de-ruta-seguridad-asistentes.md) | Qué datos salen, qué obedece el asistente y qué puede tocar |
 | [Bitácora de decisiones](docs/referencia/bitacora-decisiones-aprendizaje.md) | Decisiones, problemas, causas y ejes de aprendizaje |
 | [Evidencias](docs/evidencias/) | Ejecuciones reales y registros parciales |
