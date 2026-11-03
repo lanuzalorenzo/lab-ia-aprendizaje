@@ -19,7 +19,7 @@ El contrato completo —apertura llana, jerga, estados, evidencias y claridad qu
 
 ## Gobernanza
 
-`main` exige PR, los tres checks de CI y rama actualizada; solo el propietario fusiona.
+`main` exige PR, los tres checks de CI y rama actualizada; solo el propietario fusiona, salvo las PRs de Dependabot de parche y minor, que fusiona el flujo automático si pasan los checks.
 
 ## Verificación
 
