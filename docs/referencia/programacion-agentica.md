@@ -1,6 +1,6 @@
 # Programación agéntica: dónde paga y cómo se controla
 
-> **Estado:** Diseño (marco); la evidencia citada conserva el estado de su artefacto. **Fecha:** 2026-11-02. **Alcance:** criterio para decidir cuándo usar un agente y qué controles exigirle. No enseña a instalar la herramienta: eso está en las guías.
+> **Estado:** Diseño (marco); la evidencia citada conserva el estado de su artefacto. **Fecha:** 2026-11-03. **Alcance:** criterio para decidir cuándo usar un agente y qué controles exigirle. No enseña a instalar la herramienta: eso está en las guías.
 
 Un agente no es un chat más listo. Es un programa que lee el repositorio, decide un paso, lo ejecuta con herramientas y comprueba el resultado. La diferencia es la misma que entre dictarle una carta a alguien y darle las llaves del archivo, la fotocopiadora y el sello: gana autonomía y hay que decidir qué puede tocar. Esta página ordena cuándo compensa, qué riesgos añade y qué controles lo hacen defendible.
 
@@ -78,7 +78,7 @@ No promete código mejor ni criterio mejor. Promete ejecutar un criterio que ya 
 3. **Validadores deterministas.** Enlaces, esquema, umbrales y fechas los comprueba un script, no el modelo.
 4. **Evidencia separada.** Ejecutado, diseñado y pendiente se distinguen; cada cifra lleva fecha y artefacto.
 5. **Higiene de contexto.** Instrucciones compactas, estado en archivos, salida de herramientas acotada y compactación.
-6. **Un dueño por regla.** Si dos archivos dicen lo mismo, uno manda y el otro enlaza; se sincroniza y se valida.
+6. **Un dueño por regla.** Si dos archivos dicen lo mismo, uno manda y el otro enlaza; se sincroniza y se valida. Con varios repositorios, lo común sube a una sola capa y cada uno conserva lo suyo; cómo se reparte está en [`agents-md-publico-privado`](../guias/agents-md-publico-privado.md).
 7. **Registro y auditoría.** Queda quién hizo qué y con qué permiso; los logs no llevan secretos.
 
 La lista se puede resumir en una pregunta: **¿qué puede tocar el agente si se equivoca, y cómo me entero?**

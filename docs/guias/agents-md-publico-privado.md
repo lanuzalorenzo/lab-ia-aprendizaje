@@ -1,6 +1,6 @@
 # AGENTS.md: qué se publica y qué no
 
-> **Estado:** Diseño aplicado en este repositorio. La plantilla no se ha probado en otros proyectos.
+> **Estado:** Diseño. Los tres niveles de un solo repositorio se aplican aquí; el nivel común está descrito, no aplicado. La plantilla no se ha probado en otros proyectos.
 
 Un agente de código lee instrucciones antes de tocar nada: cómo está organizado el proyecto, qué comandos sirven para comprobar un cambio y qué no se debe tocar. Esas instrucciones pueden escribirse en el propio chat, cada vez, o guardarse en un archivo del proyecto. Este documento explica el segundo camino y dónde poner el límite entre lo público y lo privado.
 
@@ -16,17 +16,20 @@ Escribir las reglas en cada conversación tiene tres problemas:
 
 Un archivo en el repositorio se versiona como cualquier otro código: se revisa, se cambia con un commit y se puede recuperar.
 
-## 2. Tres niveles, tres lugares
+## 2. Cuatro niveles, cuatro lugares
 
-Las instrucciones no van todas en el mismo sitio. Cada nivel tiene un público distinto.
+Las instrucciones no van todas en el mismo sitio. Cada nivel tiene un alcance distinto, y no todos se publican igual.
 
 | Nivel | Dónde vive | Qué contiene | Visibilidad |
 |---|---|---|---|
 | **Modelo** | Definición del modelo (`Modelfile`) | Solo el papel del asistente y la orden de leer el `AGENTS.md` del proyecto | Público |
 | **Proyecto** | `AGENTS.md` en la raíz del repositorio | Convenciones técnicas, comandos de comprobación, qué no tocar | Público, sin datos personales ni de infraestructura |
+| **Común** | Una capa que comparten varios repositorios | Lo que vale igual en todos: idioma, formato de commit, estados, criterios de verificación | Público, si no nombra proyectos privados |
 | **Persona** | Espacio privado de notas, fuera de cualquier repositorio | Preferencias personales, rol profesional, clientes, planes, contexto de trabajo | Privado. Nunca se publica |
 
-Regla práctica: si una instrucción sirve a cualquier persona que quiera ordenar su proyecto, va en el nivel de proyecto. Si solo te sirve a ti, va en el nivel personal.
+Regla práctica: si una instrucción sirve a cualquier persona que quiera ordenar su proyecto, va en el nivel de proyecto. Si solo te sirve a ti, va en el nivel personal. Si la misma regla ya está escrita en más de un repositorio, va en el común y los demás la enlazan.
+
+El nivel común no aparece con un solo repositorio: todo cabe en el de proyecto. Y una vez que existe, la copia deja de ser una comodidad y pasa a ser un riesgo: dos versiones de la misma regla se separan y el agente obedece la que leyó. La salida es una sola fuente, una propagación y una comprobación que falle cuando divergen; cada repositorio conserva solo lo que le es propio.
 
 ## 3. El filtro antes de publicar
 
@@ -81,6 +84,7 @@ Proyecto de <qué hace, en una frase>. Estructura: `README.md` y `docs/`.
 
 - **El modelo** (`config/Modelfile.portfolio-agent`) fija un papel genérico y ordena leer el `AGENTS.md` del proyecto. No contiene ningún rol personal.
 - **El proyecto** tiene su `AGENTS.md` con las convenciones del repositorio.
+- **El común** no se usa aquí: el repositorio es uno solo y sus reglas caben en el de proyecto. El nivel común está descrito, no aplicado.
 - **El nivel personal** no está en el repositorio. Si necesitas que un asistente lo use, cárgalo en tu propio entorno, no en el repositorio público.
 
 Esto hace que el archivo del proyecto sea útil para cualquiera que lo lea, y que lo privado no tenga que viajar con él.

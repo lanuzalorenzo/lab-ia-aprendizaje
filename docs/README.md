@@ -18,7 +18,7 @@ Procedimientos paso a paso para instalar, configurar y diagnosticar.
 | [`continue-remote-ollama-setup.md`](guias/continue-remote-ollama-setup.md) | Sincronización de ventana de contexto 16K entre Continue y Ollama remoto |
 | [`gpu-setup.md`](guias/gpu-setup.md) | Comprobación de drivers CUDA y visibilidad de GPU para Ollama |
 | [`opencode-desde-cero.md`](guias/opencode-desde-cero.md) | Qué es OpenCode, por qué empezar con un modelo local y la primera sesión |
-| [`agents-md-publico-privado.md`](guias/agents-md-publico-privado.md) | Cómo organizar las instrucciones de un proyecto y el filtro antes de publicarlas |
+| [`agents-md-publico-privado.md`](guias/agents-md-publico-privado.md) | Cómo organizar las instrucciones de uno o varios repositorios y el filtro antes de publicarlas |
 | [`opencode-session-continuity.md`](guias/opencode-session-continuity.md) | Patrón de continuidad entre sesiones con comandos y archivos de estado |
 | [`local-vs-cloud.md`](guias/local-vs-cloud.md) | Criterios de decisión, flujo híbrido y configuración del modelo local |
 | [`continuidad-ia-local.md`](guias/continuidad-ia-local.md) | Qué dejar en disco para seguir trabajando sin proveedor remoto; simulacro pendiente |
