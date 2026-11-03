@@ -21,6 +21,16 @@ El contrato completo —apertura llana, jerga, estados, evidencias y claridad qu
 
 `main` exige PR, los tres checks de CI y rama actualizada; solo el propietario fusiona.
 
+## Verificación
+
+```bash
+python3 scripts/check_links.py
+python3 -m compileall -q scripts
+gitleaks detect --source . --redact --verbose --exit-code 2
+```
+
+Son los tres trabajos de `.github/workflows/ci.yml`: enlaces relativos, sintaxis de los scripts y secretos sobre el historial completo.
+
 ## Commits
 
 Formato: `type(scope): imperative summary in English`. Scopes: `docs`, `examples`, `scripts`, `config`, `repo`. Tipos: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`. Asunto imperativo, conciso y en inglés.
