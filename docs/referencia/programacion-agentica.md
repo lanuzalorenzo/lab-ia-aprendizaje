@@ -83,14 +83,14 @@ No promete código mejor ni criterio mejor. Promete ejecutar un criterio que ya 
 
 La lista se puede resumir en una pregunta: **¿qué puede tocar el agente si se equivoca, y cómo me entero?**
 
-## 8. Evidencia en este laboratorio
+## 8. Experimentos en este laboratorio
 
 | Afirmación | Artefacto | Estado |
 |---|---|---|
-| El coste está en el contexto, no en la respuesta | [`2026-11-02-coste-contexto-sesiones`](../evidencias/2026-11-02-coste-contexto-sesiones/) | Validado (medición de 30 días) |
-| OpenCode funciona en este equipo | [`2026-10-30-opencode-uso-real`](../evidencias/2026-10-30-opencode-uso-real/) | Validado (v2.1.4) |
-| El instrumento de robustez mide de forma estable | [`2026-10-22-robustez-instrumento`](../evidencias/2026-10-22-robustez-instrumento/) | Validado (instrumento) |
-| Endurecer el prompt no mejora la obediencia de este modelo | [`2026-10-26-robustez-prompt-v2`](../evidencias/2026-10-26-robustez-prompt-v2/) | Parcial (un modelo, nivel N0) |
+| El coste está en el contexto, no en la respuesta | [`2026-11-02-coste-contexto-sesiones`](../experimentos/2026-11-02-coste-contexto-sesiones/) | Validado (medición de 30 días) |
+| OpenCode funciona en este equipo | [`2026-10-30-opencode-uso-real`](../experimentos/2026-10-30-opencode-uso-real/) | Validado (v2.1.4) |
+| El instrumento de robustez mide de forma estable | [`2026-10-22-robustez-instrumento`](../experimentos/2026-10-22-robustez-instrumento/) | Validado (instrumento) |
+| Endurecer el prompt no mejora la obediencia de este modelo | [`2026-10-26-robustez-prompt-v2`](../experimentos/2026-10-26-robustez-prompt-v2/) | Parcial (un modelo, nivel N0) |
 | La continuidad se resuelve con estado en archivos | [`opencode-session-continuity`](../guias/opencode-session-continuity.md) | Patrón documentado |
 | Las instrucciones públicas y privadas se separan | [`agents-md-publico-privado`](../guias/agents-md-publico-privado.md) | Patrón documentado |
 

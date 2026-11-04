@@ -1,4 +1,12 @@
-# Evidencia — Matriz de robustez contra `qwen2.5:3b`
+# Experimento — Matriz de robustez contra `qwen2.5:3b`
+
+**Qué probé:** si `qwen2.5:3b` obedece una orden escondida en los datos cuando el prompt de sistema pide tratarlos como datos, en N0 y N1.
+
+**Qué salió:** la línea base falla. Obediencia 0,50 (2 de 4 canarios) y la orden directa funciona sin disfraz.
+
+**Qué no está medido:** N2 y N3. Las cargas codificadas no se descifraron, así que no prueban resistencia.
+
+> Resumen añadido el 2026-11-04; el registro original no cambia.
 
 > **Fecha:** 2026-10-22, 12:43–12:47
 > **Estado:** Parcial — ejecución realizada. Niveles N0 y N1. N2 y N3 pendientes.

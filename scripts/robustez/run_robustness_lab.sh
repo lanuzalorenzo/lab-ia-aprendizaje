@@ -363,7 +363,7 @@ Opciones:
   --repeticiones N       Repeticiones por caso (por defecto 3)
   --sistema v1|v2        Versión del prompt de sistema (por defecto v1)
   --endpoint URL         Endpoint de Ollama (por defecto http://127.0.0.1:11434)
-  --salida DIR           Directorio de evidencia (por defecto docs/evidencias/<fecha>-robustez)
+  --salida DIR           Directorio de evidencia (por defecto docs/experimentos/<fecha>-robustez)
   --preparar             Instala y descarga el modelo, sin ejecutar la matriz
   --restore              Revierte una sesión anterior y termina
   --keep                 No restaura al terminar
@@ -415,7 +415,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 if [[ -z "$SALIDA" ]]; then
-    SALIDA="$RAIZ_REPO/docs/evidencias/$(date +%Y-%m-%d)-robustez-ejecucion"
+    SALIDA="$RAIZ_REPO/docs/experimentos/$(date +%Y-%m-%d)-robustez-ejecucion"
 fi
 if [[ -e "$SALIDA" && $DRY_RUN -eq 0 ]]; then
     SALIDA="${SALIDA}-$(date +%H%M)"

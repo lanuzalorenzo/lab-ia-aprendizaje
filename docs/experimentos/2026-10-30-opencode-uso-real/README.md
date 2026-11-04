@@ -1,5 +1,13 @@
 # Validación de uso de OpenCode en este equipo
 
+**Qué probé:** que OpenCode arranca en esta máquina, lee el repositorio, consulta documentación y escribe archivos.
+
+**Qué salió:** funciona con la versión `v2.1.4`; la sesión añadió una guía y la enlazó desde los índices.
+
+**Qué no está medido:** precios, planes, otros métodos de instalación y una instalación limpia.
+
+> Resumen añadido el 2026-11-04; el registro original no cambia.
+
 > **Estado:** Validado el uso de la herramienta en esta máquina. No valida precios, planes ni los demás métodos de instalación.
 > **Corrección (2026-10-30, misma fecha):** la guía `docs/guias/opencode-desde-cero.md` se reescribió después de este registro. Ver la sección 10.
 

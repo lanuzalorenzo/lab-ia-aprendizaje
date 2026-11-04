@@ -1,4 +1,12 @@
-# Evidencia — Prompt v2 endurecido frente a la línea base v1
+# Experimento — Prompt v2 endurecido frente a la línea base v1
+
+**Qué probé:** si un prompt de sistema endurecido —tarea única, esquema explícito, reglas numeradas y datos delimitados— impide obedecer una orden escondida, en N0.
+
+**Qué salió:** no cambia nada. La obediencia sigue en 0,50 y los mismos dos canarios obedecen.
+
+**Qué no está medido:** N1–N3 con el prompt v2 y otros modelos.
+
+> Resumen añadido el 2026-11-04; el registro original no cambia. El comando conserva la ruta `docs/evidencias/` porque así se ejecutó; hoy la carpeta es `docs/experimentos/`.
 
 > **Fecha:** 2026-10-26, 11:04–11:05
 > **Estado:** Parcial — ejecución realizada. Nivel N0. Prompt de sistema `v2`.

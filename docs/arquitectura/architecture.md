@@ -1,8 +1,12 @@
-# Arquitectura del laboratorio
+# Arquitectura del montaje local
 
 ## Propósito y alcance
 
-Este documento describe el flujo que el repositorio pretende facilitar: usar Ollama como runtime local y acceder a un modelo desde VS Code mediante Continue. Es una descripción de diseño, no una prueba de que todos los componentes estén instalados o configurados.
+Este documento describe el montaje local que sirve de banco de pruebas: Ollama como runtime y un cliente de desarrollo que consume el modelo. Es una parte del repositorio, no el repositorio entero. Los dos ejes que ordenan el resto están cada uno en su documento: la frontera de datos, en la [hoja de ruta de seguridad](../referencia/hoja-de-ruta-seguridad-asistentes.md); el criterio de elección, en [local frente a cloud](../guias/local-vs-cloud.md). El índice general está en [`docs/README.md`](../README.md).
+
+Es una descripción de diseño, no una prueba de que todos los componentes estén instalados o configurados.
+
+![Arquitectura local prevista: el equipo cliente usa VS Code con Continue y OpenCode; ambos hablan con Ollama por HTTP en el puerto 11434 y administran el servidor por SSH. El puerto se prevé limitado a la red de laboratorio; la configuración de red no se ha verificado en este repositorio](arquitectura-local.svg)
 
 ## Componentes y límites de confianza
 
@@ -10,14 +14,14 @@ Este documento describe el flujo que el repositorio pretende facilitar: usar Oll
 |---|---|---|
 | VS Code + Continue | Interfaz y cliente del asistente | La configuración del cliente no está versionada; debe revisarse qué proveedor y endpoint usa |
 | Ollama | Recibe peticiones y ejecuta el modelo | El repositorio no verifica la interfaz de red en la que escucha ni define controles de autenticación |
-| Modelo | Genera respuestas a partir del prompt y el contexto disponible | No se fija una versión; la calidad y el consumo dependen del modelo seleccionado |
+| Modelo | Genera respuestas a partir del prompt y el contexto disponible | No se fija un digest: la etiqueta `qwen2.5-coder:7b` puede apuntar a otro manifiesto con el mismo nombre |
 | GPU NVIDIA / driver | Posible aceleración de inferencia | La GPU puede no estar disponible para el servicio; CPU/GPU y uso real deben verificarse por ejecución |
 | Scripts del repositorio | Instalación, diagnóstico y ejecución interactiva | Algunos pasos necesitan privilegios; revisar antes de ejecutar |
 | systemd | Gestión del proceso persistente | `config/ollama.service` es una referencia no validada y no debe reemplazar automáticamente la unidad existente |
 
 ## Flujo previsto
 
-1. El usuario configura Continue para conectarse a Ollama en el mismo equipo.
+1. El usuario configura Continue para conectarse a Ollama en el servidor, por HTTP en la red de laboratorio.
 2. Continue envía una petición y el contexto que corresponda al endpoint configurado.
 3. Ollama carga el modelo seleccionado y procesa la petición en CPU o GPU según compatibilidad y disponibilidad.
 4. Continue presenta la respuesta.

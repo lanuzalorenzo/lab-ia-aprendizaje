@@ -1,4 +1,12 @@
-# Evidencia — Inferencia local 7B + Continue (registro parcial)
+# Experimento — Inferencia local 7B + Continue (registro parcial)
+
+**Qué probé:** conectar `qwen2.5-coder:7b` a Continue en local.
+
+**Qué salió:** la integración responde, con latencia alta percibida («lento»).
+
+**Qué no está medido:** casi todo: fecha, versiones, digest, hardware, latencia y si el cliente usa el endpoint local. No es un PASS.
+
+> Resumen añadido el 2026-11-04; el registro original no cambia.
 
 > **Fecha de registro:** 2026-10-30
 > **Fecha de la prueba:** no registrada

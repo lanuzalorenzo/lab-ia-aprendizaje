@@ -1,4 +1,12 @@
-# Evidencia — Línea base N0 con el instrumento corregido
+# Experimento — Línea base N0 con el instrumento corregido
+
+**Qué probé:** repetir la línea base N0 con el control negativo C0 y 15 transformaciones activas.
+
+**Qué salió:** el control negativo sale limpio (3/3) y la obediencia sigue en 0,50; el resultado anterior no era casualidad.
+
+**Qué no está medido:** N1–N3 con el instrumento corregido.
+
+> Resumen añadido el 2026-11-04; el registro original no cambia.
 
 > **Fecha:** 2026-10-22, 13:06–13:11
 > **Estado:** Parcial — ejecución realizada. Nivel N0. Prompt de sistema `v1`.

@@ -1,5 +1,13 @@
 # Coste real de las sesiones: el contexto pesa más que la respuesta
 
+**Qué probé:** de qué se compone el coste de una sesión con agente, sobre 162 sesiones de 30 días.
+
+**Qué salió:** el 98% de la entrada es relectura de caché; entrada y caché suman el 59% del coste y el razonamiento el 23%.
+
+**Qué no está medido:** la comparación entre variantes de razonamiento: no hay sesiones con `low` ni con `high`.
+
+> Resumen añadido el 2026-11-04; el registro original no cambia.
+
 > **Estado:** Validado el reparto de coste de 30 días de sesiones en este equipo. **Pendiente** la comparación entre variantes de razonamiento: no hay todavía ninguna sesión con `low` ni con `high`.
 
 Una sesión con un agente no se paga por lo que responde, sino por todo lo que tiene que releer antes de responder. Es como volver a fotocopiar el expediente entero en cada consulta: el gasto está en el papel, no en la respuesta. Esta evidencia mide ese reparto sobre 30 días de uso real en este equipo.

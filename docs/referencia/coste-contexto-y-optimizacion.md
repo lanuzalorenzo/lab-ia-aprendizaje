@@ -52,7 +52,7 @@ Estas claves son las de la versión probada. Antes de copiarlas, compruébalas e
 
 - Modelo de trabajo diario: un proveedor con límites suficientes (OpenCode Go, ver [local frente a cloud](../guias/local-vs-cloud.md)). Modelo local solo para datos que no pueden salir de la red.
 - Reservar modelos de razonamiento para decisiones de diseño y seguridad; usar modelos rápidos para DTOs, tests, Markdown e índices.
-- El razonamiento se factura como tokens de salida: una variante más alta cuesta más por respuesta aunque el precio por token no cambie. Fíjala por tarea y mide coste por tarea aceptada, no coste por token (ver [`2026-11-02-coste-contexto-sesiones`](../evidencias/2026-11-02-coste-contexto-sesiones/)).
+- El razonamiento se factura como tokens de salida: una variante más alta cuesta más por respuesta aunque el precio por token no cambie. Fíjala por tarea y mide coste por tarea aceptada, no coste por token (ver [`2026-11-02-coste-contexto-sesiones`](../experimentos/2026-11-02-coste-contexto-sesiones/)).
 
 ### 2.7 Adopción de servidores MCP
 
@@ -92,6 +92,6 @@ El coste de contexto es también un riesgo de disponibilidad y de integridad:
 
 ## 6. Límites
 
-- Este documento no afirma ahorros medidos en este laboratorio; solo describe controles aplicados y su justificación. Lo que sí está medido es el reparto del gasto en sesiones reales: entrada y caché suman el 59% del coste y el razonamiento el 23% (ver [`2026-11-02-coste-contexto-sesiones`](../evidencias/2026-11-02-coste-contexto-sesiones/)).
+- Este documento no afirma ahorros medidos en este laboratorio; solo describe controles aplicados y su justificación. Lo que sí está medido es el reparto del gasto en sesiones reales: entrada y caché suman el 59% del coste y el razonamiento el 23% (ver [`2026-11-02-coste-contexto-sesiones`](../experimentos/2026-11-02-coste-contexto-sesiones/)).
 - Los valores de `keep.tokens`, `max_lines` y `max_bytes` son puntos de partida; deben ajustarse según el modelo y la tarea.
 - No sustituye a las políticas de privacidad ni a los límites de cuota del proveedor.
