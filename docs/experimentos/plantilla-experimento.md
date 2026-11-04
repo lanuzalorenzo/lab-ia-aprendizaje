@@ -1,6 +1,14 @@
-# Plantilla de Evidencia
+# Plantilla de experimento
 
-> **Uso:** Copia esta plantilla a una carpeta nueva bajo `docs/evidencias/` con el nombre `YYYY-MM-DD-descripcion-corta[-vN]` (por ejemplo, `2026-10-22-robustez-ejecucion-v2`). Rellena cada sección. Elimina secciones que no apliquen.
+> **Uso:** Copia esta plantilla a una carpeta nueva bajo `docs/experimentos/` con el nombre `YYYY-MM-DD-descripcion-corta[-vN]` (por ejemplo, `2026-10-22-robustez-ejecucion-v2`). Rellena cada sección. Elimina secciones que no apliquen.
+
+---
+
+**Qué probé:** una frase con la pregunta concreta.
+
+**Qué salió:** el resultado principal, con la cifra si la hay.
+
+**Qué no está medido:** lo que esta página no demuestra.
 
 ---
 
@@ -38,7 +46,7 @@ Artefactos generados:
 
 | Pregunta | Estado |
 |----------|--------|
-| ¿Qué valida esta evidencia? | Validado / No medido / N/A |
+| ¿Qué valida este experimento? | Validado / No medido / N/A |
 | ¿Qué **no** valida? | ... |
 
 ---

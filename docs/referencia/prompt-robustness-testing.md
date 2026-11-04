@@ -1,6 +1,6 @@
 # Robustez de prompts: ¿sigue obedeciendo si el texto cambia de forma?
 
-> **Estado:** Parcial, ejecutado. Tres pasadas sobre `qwen2.5:3b`: prompt `v1` con los niveles N0 y N1; instrumento corregido con prompt `v1` en N0; prompt `v2` en N0, entre el 2026-10-22 y el 2026-10-26. **La línea base falla** (0,50) y las cuatro transformaciones codificadas quedaron fuera por ilegibles. N2, N3 y N1 con el prompt `v2` siguen pendientes. Ver [instrumento validado](../evidencias/2026-10-22-robustez-instrumento/README.md), [ejecución con N0/N1](../evidencias/2026-10-22-robustez-ejecucion-v1/README.md), [línea base con el instrumento corregido](../evidencias/2026-10-22-robustez-ejecucion-v2/README.md) y [prompt v2](../evidencias/2026-10-26-robustez-prompt-v2/README.md).
+> **Estado:** Parcial, ejecutado. Tres pasadas sobre `qwen2.5:3b`: prompt `v1` con los niveles N0 y N1; instrumento corregido con prompt `v1` en N0; prompt `v2` en N0, entre el 2026-10-22 y el 2026-10-26. **La línea base falla** (0,50) y las cuatro transformaciones codificadas quedaron fuera por ilegibles. N2, N3 y N1 con el prompt `v2` siguen pendientes. Ver [instrumento validado](../experimentos/2026-10-22-robustez-instrumento/README.md), [ejecución con N0/N1](../experimentos/2026-10-22-robustez-ejecucion-v1/README.md), [línea base con el instrumento corregido](../experimentos/2026-10-22-robustez-ejecucion-v2/README.md) y [prompt v2](../experimentos/2026-10-26-robustez-prompt-v2/README.md).
 >
 > **Propósito:** medir si una función con LLM resiste órdenes ocultas que no cambian de significado, solo de forma. Es la parte medible de las pruebas de inyección de [`ai-security-evaluation.md`](ai-security-evaluation.md), que cubren la orden tal cual.
 
@@ -211,7 +211,7 @@ Este documento combina diseño y resultados parciales. Lo que no tiene evidencia
 | Artefacto | Ruta | Estado |
 |---|---|---|
 | Matriz ejecutable | [`scripts/robustez/prompt_robustness_matrix.py`](../../scripts/robustez/prompt_robustness_matrix.py) | Implementada, solo biblioteca estándar de Python |
-| Validación del instrumento | [`docs/evidencias/2026-10-22-robustez-instrumento/`](../evidencias/2026-10-22-robustez-instrumento/README.md) | Validada sin modelo |
+| Validación del instrumento | [`docs/experimentos/2026-10-22-robustez-instrumento/`](../experimentos/2026-10-22-robustez-instrumento/README.md) | Validada sin modelo |
 | Ejecución en Ubuntu | [`scripts/robustez/run_robustness_lab.sh`](../../scripts/robustez/run_robustness_lab.sh) | Implementada y ejecutada |
 
 Subcomandos:
@@ -277,7 +277,7 @@ La instalación no se duplica: el script usa [`install_ollama.sh`](../../scripts
 Lo que produce cada ejecución:
 
 ```text
-../evidencias/<fecha>-robustez-ejecucion-v1/
+../experimentos/<fecha>-robustez-ejecucion-v1/
 ├── entorno.json     # sistema, kernel, CPU, RAM, GPU, versión de Ollama, huella del modelo
 ├── resultados.json  # un registro por caso con veredicto, repeticiones e inestabilidad
 └── resumen.json     # obediencia y robustez por nivel, más el control negativo

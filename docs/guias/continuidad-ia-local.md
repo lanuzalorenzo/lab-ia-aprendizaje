@@ -13,7 +13,7 @@ No se empieza de cero. Montar un agente local con Ollama ya lo hice, con registr
 | Hecho | Estado | Dónde está |
 |---|---|---|
 | Servidor Ubuntu sin escritorio y Ollama como servicio | Validado el montaje: se hizo en el servidor y consta en la bitácora, sin artefacto congelado. La guía de despliegue sigue en Runbook preparado | [Guía de despliegue](server-deployment-ubuntu-ollama.md), [bitácora, entradas 01–03](../referencia/bitacora-decisiones-aprendizaje.md) |
-| Inferencia con `qwen2.5:3b` y entorno registrado | Validado que se ejecutó, con artefactos. Esa ejecución fue efímera —el script instaló y desinstaló—, así que no acredita el servidor. La página está en Parcial por los niveles N2 y N3 pendientes | [Evidencia del 22 de octubre](../evidencias/2026-10-22-robustez-ejecucion-v1/README.md#1-entorno) |
+| Inferencia con `qwen2.5:3b` y entorno registrado | Validado que se ejecutó, con artefactos. Esa ejecución fue efímera —el script instaló y desinstaló—, así que no acredita el servidor. La página está en Parcial por los niveles N2 y N3 pendientes | [Experimento del 22 de octubre](../experimentos/2026-10-22-robustez-ejecucion-v1/README.md#1-entorno) |
 | `qwen2.5-coder:7b` con Continue a 16K | Parcial: probado por el autor, sin artefacto reproducible | [Bitácora, entrada 05](../referencia/bitacora-decisiones-aprendizaje.md#entrada-05-ajuste-de-la-ventana-de-contexto-portfolio-agent-con-continue) |
 | Flujo local como opción diaria | Probado y dado por no óptimo: dejó de ser la opción por defecto porque montarlo y ajustar el rendimiento consumía demasiado tiempo y su capacidad no cubría el trabajo diario. El flujo diario pasó a OpenCode con proveedor remoto | [Local frente a cloud, §3–§4](local-vs-cloud.md), [bitácora, entrada 08](../referencia/bitacora-decisiones-aprendizaje.md#entrada-08-trabajo-diario-con-opencode-go-y-local-para-datos-restringidos) |
 
@@ -49,7 +49,7 @@ Cifras de orden de magnitud, no medidas en este repositorio. El simulacro (§7) 
 | `Modelfile` propio (el fichero con el que Ollama construye un modelo derivado) | Reconstruye el modelo sin volver a descargar la base | Kilobytes | Repositorio |
 | Cliente fijado (OpenCode o la extensión de VS Code) | Sin cliente, el modelo existe pero no lo usas | Decenas de MB | Disco externo |
 | Perfil local del cliente | Evita que el arranque dependa de una sesión remota | Kilobytes | Equipo cliente + disco externo; no se versiona |
-| Conjunto de evaluación de `docs/evidencias/` | Permite comparar el local con lo ya medido, sin red. Reejecutarlo necesita además `scripts/robustez/` y Python | Megabytes | Repositorio |
+| Conjunto de evaluación de `docs/experimentos/` | Permite comparar el local con lo ya medido, sin red. Reejecutarlo necesita además `scripts/robustez/` y Python | Megabytes | Repositorio |
 
 Dos copias y una fuera de la máquina. Si los pesos solo viven en el servidor, el punto único de fallo sigue existiendo, solo que es más pequeño y más silencioso.
 
@@ -64,7 +64,7 @@ ollama show --modelfile qwen2.5-coder:7b | grep '^FROM'
 
 `ollama list` muestra un identificador corto del manifiesto; la línea `FROM` del `Modelfile` trae el `sha256` del blob (cada fichero de pesos, guardado con un nombre que sale de su propio hash). Son dos valores distintos y el que se anota en el inventario es el segundo.
 
-El formato ya está registrado una vez: `qwen2.5:3b` consta como `357c53fb659c` en la [ejecución del 22 de octubre](../evidencias/2026-10-22-robustez-ejecucion-v1/entorno.json), que es el identificador del manifiesto, no el `sha256` del blob. Coincide con la fase 1 de la [hoja de ruta de seguridad](../referencia/hoja-de-ruta-seguridad-asistentes.md): fijar el digest es el mismo trabajo que exige la reproducibilidad.
+El formato ya está registrado una vez: `qwen2.5:3b` consta como `357c53fb659c` en la [ejecución del 22 de octubre](../experimentos/2026-10-22-robustez-ejecucion-v1/entorno.json), que es el identificador del manifiesto, no el `sha256` del blob. Coincide con la fase 1 de la [hoja de ruta de seguridad](../referencia/hoja-de-ruta-seguridad-asistentes.md): fijar el digest es el mismo trabajo que exige la reproducibilidad.
 
 ## 4. Dónde están los pesos y cómo se copian
 
