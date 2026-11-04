@@ -1,8 +1,10 @@
-<img src="../../assets/iconos/ia-local.svg" width="64" alt="Icono del laboratorio de IA local">
+<img src="../../assets/iconos/ia-local.svg" width="64" alt="Icono del laboratorio de IA">
 
 # OpenCode desde cero
 
 > Para quién: si nunca has usado un agente de código en la terminal. No hace falta saber programar a fondo.
+
+> **Estado:** Parcial — escrita desde el uso real; no es una evaluación ni un recorrido verificado de principio a fin.
 
 Esta guía cuenta cómo llegué a OpenCode, qué es y cómo empezar. Está escrita desde el uso, no desde el manual.
 
@@ -10,15 +12,15 @@ Esta guía cuenta cómo llegué a OpenCode, qué es y cómo empezar. Está escri
 
 Todo empezó por los límites.
 
-Copilot se nos quedaba corto cada mes. Antigravity se reseteaba cada semana, pero a medida que los proyectos crecían, se agotaba antes de que llegara el reseteo.
+Copilot se me quedaba corto cada mes. Antigravity se reseteaba cada semana, pero a medida que los proyectos crecían, se agotaba antes de que llegara el reseteo.
 
-Probamos OpenRouter con Continue en VS Code. Había modelos gratuitos, pero no eran suficientes para trabajar a diario.
+Probé OpenRouter con Continue en VS Code. Había modelos gratuitos, pero no eran suficientes para trabajar a diario.
 
 Después encontramos OpenCode. Intentamos usarlo con Ollama en local. Funcionaba, pero montarlo y ajustar el rendimiento costaba mucho tiempo.
 
 Pasé a OpenCode Console y me convenció, hasta que el proyecto creció y se quedaron sin créditos. Mientras tanto probé a conectar Antigravity para seguir trabajando con OpenCode. Fue caótico: no me dejaba trabajar bien. Acabé en OpenCode Go, que es lo que uso hoy. En límites y en disponibilidad de modelos ha funcionado mejor que todo lo anterior.
 
-La lección que nos dejó el camino: el límite no lo marca solo la herramienta, sino cuánto trabajas. Y el modelo se puede cambiar sin cambiar la herramienta.
+La lección que me dejó el camino: el límite no lo marca solo la herramienta, sino cuánto trabajas. Y el modelo se puede cambiar sin cambiar la herramienta.
 
 Las opciones, los planes y las condiciones cambian. Mira la [documentación de proveedores](https://opencode.ai/v2/docs/providers/) antes de decidir.
 
