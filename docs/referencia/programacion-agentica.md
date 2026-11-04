@@ -1,6 +1,6 @@
 # Programación agéntica: dónde paga y cómo se controla
 
-> **Estado:** Diseño (marco); la evidencia citada conserva el estado de su artefacto. **Fecha:** 2026-11-03. **Alcance:** criterio para decidir cuándo usar un agente y qué controles exigirle. No enseña a instalar la herramienta: eso está en las guías.
+> **Estado:** Diseño (marco); la evidencia citada conserva el estado de su artefacto. **Fecha:** 2026-11-04. **Alcance:** criterio para decidir cuándo usar un agente y qué controles exigirle. No enseña a instalar la herramienta: eso está en las guías.
 
 Un agente no es un chat más listo. Es un programa que lee el repositorio, decide un paso, lo ejecuta con herramientas y comprueba el resultado. La diferencia es la misma que entre dictarle una carta a alguien y darle las llaves del archivo, la fotocopiadora y el sello: gana autonomía y hay que decidir qué puede tocar. Esta página ordena cuándo compensa, qué riesgos añade y qué controles lo hacen defendible.
 
@@ -15,9 +15,13 @@ Un agente de programación es un modelo al que se le añaden cuatro cosas:
 | Permisos | Qué puede tocar y qué no, aplicado por la herramienta, no por el prompt |
 | Estado | Archivos que sobreviven a la sesión: plan, diario, informes |
 
+Las cuatro piezas se entienden con una imagen de oficina: el manual es el `AGENTS.md` —cómo está montado el proyecto y qué se comprueba antes de dar algo por hecho—; la caja de herramientas es lo que el agente puede usar para leer, editar, ejecutar o consultar; las llaves son los permisos; y el parte de trabajo es el estado en archivos, que evita reconstruir el contexto en cada sesión. Aparte de esas cuatro piezas, el vale de quien autoriza es la puerta humana: el `commit`, el `push`, el despliegue y la publicación los firma una persona o una excepción escrita en el repo.
+
 El modelo puede ser el mismo que el de un chat. Lo que cambia es el bucle: actúa, ve el resultado y vuelve a decidir. Por eso la unidad de diseño no es el prompt, sino **el permiso y la verificación**.
 
 No es autocompletar: eso predice texto y no ejecuta. No es RPA: eso sigue reglas fijas y no juzga. No es un chatbot: eso responde y no deja el repositorio cambiado.
+
+El prompt pide, el permiso impide: pedir «no toques producción» no es una barrera; no dar la llave, sí.
 
 ## 2. El bucle
 
