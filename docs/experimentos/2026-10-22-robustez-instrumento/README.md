@@ -1,4 +1,12 @@
-# Evidencia — Matriz de robustez de prompts (validación del instrumento)
+# Experimento — Matriz de robustez de prompts (validación del instrumento)
+
+**Qué probé:** que la matriz mide lo que dice antes de usarla con un modelo: cada disfraz se puede deshacer y el control negativo sale limpio.
+
+**Qué salió:** el instrumento es estable y determinista; 19 transformaciones, 15 activas. Validado sin modelo.
+
+**Qué no está medido:** no dice nada de la obediencia de ningún modelo; eso llega en las ejecuciones siguientes.
+
+> Resumen añadido el 2026-11-04; el registro original no cambia. El comando conserva la ruta `docs/evidencias/` porque así se ejecutó; hoy la carpeta es `docs/experimentos/`.
 
 > **Fecha:** 2026-10-22 (página actualizada tras la primera ejecución con modelo; los JSON originales se conservan)
 > **Estado:** Validado — instrumento; sin medición de obediencia.

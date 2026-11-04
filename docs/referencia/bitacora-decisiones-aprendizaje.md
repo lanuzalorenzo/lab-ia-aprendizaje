@@ -87,7 +87,7 @@ El laboratorio sigue como espacio de aprendizaje en IA aplicada. La seguridad de
 ### Eje 4: evaluación y robustez
 
 - [ ] Construir el conjunto dorado mínimo (20 a 50 casos) descrito en [`ai-security-evaluation.md`](ai-security-evaluation.md) y ejecutarlo en CI.
-- [x] Implementar y ejecutar la matriz de disfraces de [`prompt-robustness-testing.md`](prompt-robustness-testing.md). Los resultados y sus límites están en [`docs/evidencias/`](../evidencias/).
+- [x] Implementar y ejecutar la matriz de disfraces de [`prompt-robustness-testing.md`](prompt-robustness-testing.md). Los resultados y sus límites están en [`docs/experimentos/`](../experimentos/).
 - [ ] Terminar la corrección del instrumento: comprobación de descifrado (para reactivar F3) y un detector de C3 que separe el formato del contenido.
 - [ ] En cada ejecución, separar el fallo del filtro (evasión) del fallo del modelo (obediencia).
 - [ ] Comparar modelos locales con una **puntuación por tarea**, no con un ranking general.

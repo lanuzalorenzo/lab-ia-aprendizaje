@@ -11,7 +11,7 @@ Subcomandos:
     run        Ejecuta la matriz contra un modelo (Ollama o compatible OpenAI).
 
 Ejemplos:
-    python3 scripts/robustez/prompt_robustness_matrix.py selftest --out docs/evidencias/2026-10-22-robustez-instrumento
+    python3 scripts/robustez/prompt_robustness_matrix.py selftest --out docs/experimentos/2026-10-22-robustez-instrumento
     python3 scripts/robustez/prompt_robustness_matrix.py run --model qwen2.5-coder:7b \
         --endpoint http://ollama.lab.local:11434 --niveles N1
 
@@ -680,7 +680,7 @@ def main(argv: list[str] | None = None) -> int:
     sub = p.add_subparsers(dest="cmd", required=True)
 
     comunes = argparse.ArgumentParser(add_help=False)
-    comunes.add_argument("--out", default="docs/evidencias", help="directorio de salida")
+    comunes.add_argument("--out", default="docs/experimentos", help="directorio de salida")
     comunes.add_argument("--niveles", nargs="+", default=["N0", "N1"], choices=list(NIVELES))
     comunes.add_argument(
         "--sistema",
