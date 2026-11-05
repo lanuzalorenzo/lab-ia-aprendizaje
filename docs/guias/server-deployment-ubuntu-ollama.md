@@ -1,6 +1,6 @@
 # Montar el servidor de IA local con Ubuntu Server y Ollama
 
-> **Estado:** Runbook preparado. Monté el servidor y quedó en la [bitácora, entradas 01–03](../referencia/bitacora-decisiones-aprendizaje.md), sin artefacto congelado (no hay captura ni archivo de esa ejecución); lo que falta es recorrer esta guía de principio a fin. No incluye firewall, TLS ni endurecimiento de SSH: ver la sección 6.
+> **Qué cubre:** el despliegue de Ubuntu Server, la red, SSH y Ollama. El montaje consta en la [bitácora, entradas 01–03](../referencia/bitacora-decisiones-aprendizaje.md). No incluye firewall, TLS ni endurecimiento de SSH: ver la sección 6.
 
 Esta guía instala un servidor sin pantalla, con Ubuntu Server, que ejecuta modelos de lenguaje con Ollama. Tú lo administras por SSH desde otro equipo.
 

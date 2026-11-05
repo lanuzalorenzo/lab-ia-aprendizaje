@@ -4,8 +4,6 @@
 
 > Para quién: si nunca has usado un agente de código en la terminal. No hace falta saber programar a fondo.
 
-> **Estado:** Parcial — escrita desde el uso real; no es una evaluación ni un recorrido verificado de principio a fin.
-
 Esta guía cuenta cómo llegué a OpenCode, qué es y cómo empezar. Está escrita desde el uso, no desde el manual.
 
 ## Cómo llegué aquí

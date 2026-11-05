@@ -1,6 +1,6 @@
 # AGENTS.md: qué se publica y qué no
 
-> **Estado:** Diseño. Los tres niveles de un solo repositorio se aplican aquí; el nivel común está descrito, no aplicado. La plantilla no se ha probado en otros proyectos.
+> **Qué cubre:** el criterio, la plantilla y el filtro de lo publicable. La parte común no se publica: aquí se explica el criterio, no la configuración interna.
 
 Un agente de código lee instrucciones antes de tocar nada: cómo está organizado el proyecto, qué comandos sirven para comprobar un cambio y qué no se debe tocar. Esas instrucciones pueden escribirse en el propio chat, cada vez, o guardarse en un archivo del proyecto. Este documento explica el segundo camino y dónde poner el límite entre lo público y lo privado.
 
@@ -84,7 +84,7 @@ Proyecto de <qué hace, en una frase>. Estructura: `README.md` y `docs/`.
 
 - **El modelo** (`config/Modelfile.portfolio-agent`) fija un papel genérico y ordena leer el `AGENTS.md` del proyecto. No contiene ningún rol personal.
 - **El proyecto** tiene su `AGENTS.md` con las convenciones del repositorio.
-- **El común** no se usa aquí: el repositorio es uno solo y sus reglas caben en el de proyecto. El nivel común está descrito, no aplicado.
+- **El común** no se usa en este repositorio: el repositorio es uno solo y sus reglas caben en el de proyecto. En un espacio con varios repositorios, el nivel común se aplica fuera de aquí; su contenido no se publica.
 - **El nivel personal** no está en el repositorio. Si necesitas que un asistente lo use, cárgalo en tu propio entorno, no en el repositorio público.
 
 Esto hace que el archivo del proyecto sea útil para cualquiera que lo lea, y que lo privado no tenga que viajar con él.

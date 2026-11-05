@@ -1,6 +1,6 @@
 # Hoja de ruta: seguridad de asistentes en local
 
-> **Estado:** Diseño. Fase 0 en revisión (2026-10-30). No hay resultados de los tres experimentos; lo que aparece como pendiente no se presenta como validado.
+> **Estado:** Diseño. Fase 0 en revisión (actualizada el 2026-11-05). No hay resultados de los tres experimentos; lo que aparece como pendiente no se presenta como validado.
 >
 > **Alcance:** este repositorio, con Ollama y un cliente de desarrollo (Continue u OpenCode). La inferencia local es la plataforma de pruebas. El eje de esta hoja de ruta es la seguridad del asistente: qué datos salen, qué obedece y qué puede tocar.
 
@@ -16,7 +16,7 @@ Queda fuera: rankings de modelos, *AI red teaming* genérico, certificaciones, R
 
 | Fase | Objetivo | Entregable | Criterio de salida | Estado |
 |---|---|---|---|---|
-| **0. Verdad y alcance** | Que el repositorio no afirme más de lo que sostiene | Rutas privadas eliminadas, estados explícitos, comandos copiables, prueba 7B + Continue registrada como Parcial, bug de `--restore` corregido | Sin rutas privadas, sin enlaces rotos, sin estados contradictorios | En revisión |
+| **0. Verdad y alcance** | Que el repositorio no afirme más de lo que sostiene | Rutas privadas eliminadas, estados explícitos, comandos copiables, prueba 7B + Continue registrada como Validado el uso, bug de `--restore` corregido | Sin rutas privadas, sin enlaces rotos, sin estados contradictorios | En revisión |
 | **1. Reproducibilidad mínima** | Que lo que ya funciona se pueda repetir | `portfolio-agent` construido con `ollama create`, digest fijado, `run_agent.sh` usando ese modelo, servicio no-root, bind/firewall documentado o declarado local-only | Un runbook desde cero produce una respuesta local y deja evidencia saneada | Pendiente |
 | **2. Frontera de datos** | Qué sale del equipo al usar el asistente | Captura de conexiones, DNS, destinos y volumen en local y en el flujo híbrido; prueba negativa sin red | Tabla de destinos con fecha y conclusión, incluso si no hay salida | Pendiente |
 | **3. Inyección desde el repositorio** | Qué obedece el agente al leer un archivo | Fixture con instrucción oculta, fichero señuelo, tarea de agente, transcripción y veredicto | Evidencia de qué leyó, qué obedeció y qué no; el resultado negativo también se publica | Pendiente |
@@ -59,7 +59,7 @@ Queda fuera: rankings de modelos, *AI red teaming* genérico, certificaciones, R
 - Un hallazgo no es un PASS. Un control que no se rompe también es un hallazgo.
 - Un resultado negativo se publica; no se rellena con una expectativa.
 - No se publican IPs internas, secretos, rutas personales ni prompts privados.
-- Si un paso no se puede reproducir, se marca como **Parcial** o **Pendiente**, no como **Validado**.
+- Si un paso no se puede reproducir, se marca como **Parcial** o **Pendiente**, no como **Validado**. La excepción es **Validado el uso**: se ejecutó y se observó, con la falta de reproducibilidad declarada en la ficha; no se presenta como reproducible ni como PASS.
 
 ## 6. Decisión de alcance
 

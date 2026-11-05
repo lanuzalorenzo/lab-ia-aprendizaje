@@ -1,6 +1,6 @@
 # Diagnóstico del laboratorio
 
-> **Estado:** Runbook preparado. Cada paso es una comprobación para empezar, no una solución garantizada. No se han probado todos los casos en este repositorio.
+> **Qué cubre:** comprobaciones para empezar a diagnosticar. Cada paso es un punto de partida, no una solución garantizada.
 
 Las comprobaciones de esta guía no cambian nada en el sistema. Aplica un arreglo solo cuando sepas qué provoca el problema.
 

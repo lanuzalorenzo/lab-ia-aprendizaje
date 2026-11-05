@@ -4,7 +4,7 @@
 
 Aprendo IA probando: levanto una herramienta, la uso en trabajo real y anoto qué sale. Empecé con un servidor propio y Ollama para no sacar datos de la red; hoy hay guías de agentes, experimentos con resultado y criterios sobre qué dato cruza la frontera. Nada de rankings ni comparativas sin medición.
 
-> **Estado (2026-11-04).** Cada guía y cada experimento declara el suyo en su ficha; este resumen no repite la lista. **Validado** significa que se ejecutó y hay resultado observado. Un hallazgo no es un PASS.
+> **Estado (2026-11-05).** Cada experimento y cada resultado declara el suyo en su ficha; las guías no llevan estado. **Validado** significa que se ejecutó y hay resultado observado. Un hallazgo no es un PASS.
 
 ## Guías
 
@@ -18,7 +18,7 @@ Aprendo IA probando: levanto una herramienta, la uso en trabajo real y anoto qu�
 - **Robustez:** con `qwen2.5:3b`, una orden escondida se obedece sin disfraz; endurecer el prompt no baja la obediencia (0,50).
 - **Coste:** el 98% de la entrada es relectura de caché.
 - **OpenCode:** arranca, lee el repositorio y escribe.
-- **7B con Continue:** funciona y va lento, sin artefacto reproducible.
+- **7B con Continue:** funciona y va lento; sin métricas.
 
 Cada uno abre con qué probé, qué salió y qué no está medido. Índice: [`docs/README.md`](docs/README.md).
 

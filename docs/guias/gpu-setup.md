@@ -1,7 +1,5 @@
 # Comprobar la GPU para Ollama
 
-> **Estado:** Runbook preparado. Es un procedimiento de diagnóstico; no hay una ejecución registrada en este repositorio.
-
 Esta guía sirve para saber dos cosas: si el sistema ve una GPU NVIDIA y si Ollama la usa de verdad. No instala drivers ni cambia la configuración del equipo, y no garantiza que funcione con cualquier combinación de GPU, driver y modelo.
 
 ## Qué necesitas
