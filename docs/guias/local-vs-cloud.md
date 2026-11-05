@@ -25,6 +25,8 @@ La respuesta puede ser distinta para cada flujo. En este laboratorio, el trabajo
 | Cumplimiento | Control directo, sin tercero | Requiere revisar región, retención y subencargados |
 | Reproducibilidad | Alta si fijas versiones | Puede cambiar sin aviso |
 
+Qué modelo cabe en cada cantidad de memoria, qué velocidad se puede esperar y a partir de qué gasto mensual compensa comprar el equipo: [dimensionado de hardware](../referencia/dimensionado-hardware-ia-local.md).
+
 ## 3. Escenarios típicos
 
 | Escenario | Decisión razonable | Motivo |
