@@ -1,6 +1,6 @@
 # Continuidad de la IA local: qué tener en disco antes de necesitarlo
 
-> **Estado:** Runbook preparado — el montaje local se hizo (bitácora) y la inferencia se ejecutó con artefactos (evidencia), aunque en un entorno efímero; aquí se prepara su continuidad. Ninguna cifra de tamaño medida todavía en este repositorio. El simulacro está `Pendiente`.
+> **Qué cubre:** qué dejar en disco y cómo comprobar que sigue ahí para trabajar sin proveedor remoto. El montaje y la inferencia ya se hicieron; el simulacro de corte no se ejecuta en esta guía.
 >
 > **Propósito:** que el laboratorio siga sirviendo si un día no hay proveedor remoto, sin improvisar ese mismo día.
 
@@ -10,11 +10,12 @@ Esto no es un plan para el fin del mundo. Es la caja de fusibles de casa: no se 
 
 No se empieza de cero. Montar un agente local con Ollama ya lo hice, con registro y con decisión tomada después. Esta guía no repite ese trabajo: hereda lo que quedó y añade la parte que no se hizo, que es conservarlo para cuando la alternativa no esté.
 
-| Hecho | Estado | Dónde está |
+| Hecho | Situación | Dónde está |
 |---|---|---|
-| Servidor Ubuntu sin escritorio y Ollama como servicio | Validado el montaje: se hizo en el servidor y consta en la bitácora, sin artefacto congelado. La guía de despliegue sigue en Runbook preparado | [Guía de despliegue](server-deployment-ubuntu-ollama.md), [bitácora, entradas 01–03](../referencia/bitacora-decisiones-aprendizaje.md) |
-| Inferencia con `qwen2.5:3b` y entorno registrado | Validado que se ejecutó, con artefactos. Esa ejecución fue efímera —el script instaló y desinstaló—, así que no acredita el servidor. La página está en Parcial por los niveles N2 y N3 pendientes | [Experimento del 22 de octubre](../experimentos/2026-10-22-robustez-ejecucion-v1/README.md#1-entorno) |
-| `qwen2.5-coder:7b` con Continue a 16K | Parcial: probado por el autor, sin artefacto reproducible | [Bitácora, entrada 05](../referencia/bitacora-decisiones-aprendizaje.md#entrada-05-ajuste-de-la-ventana-de-contexto-portfolio-agent-con-continue) |
+| Servidor Ubuntu sin escritorio y Ollama como servicio | El montaje se hizo en el servidor y consta en la bitácora, sin artefacto congelado | [Guía de despliegue](server-deployment-ubuntu-ollama.md), [bitácora, entradas 01–03](../referencia/bitacora-decisiones-aprendizaje.md) |
+| Inferencia con `qwen2.5:3b` y entorno registrado | La inferencia se ejecutó con artefactos. Fue efímera —el script instaló y desinstaló—, así que no acredita el servidor. La página de robustez tiene N2 y N3 pendientes | [Experimento del 22 de octubre](../experimentos/2026-10-22-robustez-ejecucion-v1/README.md#1-entorno) |
+| `qwen2.5-coder:7b` con Continue | Probado en este equipo; funciona y es lento. Sin métricas | [Experimento del 30 de octubre](../experimentos/2026-10-30-inferencia-7b-continue/README.md) |
+| `portfolio-agent` con Continue a 16K | El ajuste de `num_ctx` está en la bitácora, entrada 05 | [Bitácora, entrada 05](../referencia/bitacora-decisiones-aprendizaje.md#entrada-05-ajuste-de-la-ventana-de-contexto-portfolio-agent-con-continue) |
 | Flujo local como opción diaria | Probado y dado por no óptimo: dejó de ser la opción por defecto porque montarlo y ajustar el rendimiento consumía demasiado tiempo y su capacidad no cubría el trabajo diario. El flujo diario pasó a OpenCode con proveedor remoto | [Local frente a cloud, §3–§4](local-vs-cloud.md), [bitácora, entrada 08](../referencia/bitacora-decisiones-aprendizaje.md#entrada-08-trabajo-diario-con-opencode-go-y-local-para-datos-restringidos) |
 
 Dos matices que hacen que esta guía sea útil y no un capricho:

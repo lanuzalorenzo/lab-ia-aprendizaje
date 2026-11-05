@@ -1,7 +1,5 @@
 # Continuidad de sesiones con OpenCode
 
-> **Estado:** Parcial — patrón documentado a partir del uso. No es una evaluación comparativa de modelos ni una garantía de que cualquier agente lo aplique igual.
->
 > **Alcance:** OpenCode como cliente de agentes. El patrón es aplicable a otros clientes que permitan comandos personalizados y lectura de archivos.
 
 ## 1. El problema

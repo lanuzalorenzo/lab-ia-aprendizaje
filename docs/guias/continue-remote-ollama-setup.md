@@ -1,6 +1,6 @@
 # Continue en VS Code con Ollama en otro equipo
 
-> **Estado:** Runbook preparado. La configuración de ejemplo no está guardada en el repositorio, y el resultado de la conexión no se ha registrado aquí.
+> **Qué cubre:** la conexión de Continue con Ollama remoto y la ventana de 16K, probada en este equipo ([bitácora, entrada 05](../referencia/bitacora-decisiones-aprendizaje.md#entrada-05-ajuste-de-la-ventana-de-contexto-portfolio-agent-con-continue)). La configuración de ejemplo es orientativa y no se guarda como archivo.
 
 Esta guía configura Continue, la extensión de VS Code, para usar un modelo que corre en el servidor de Ollama de tu red.
 

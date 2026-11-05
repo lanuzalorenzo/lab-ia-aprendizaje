@@ -1,7 +1,5 @@
 # Inferencia local frente a cloud: criterios y flujo del laboratorio
 
-> **Estado:** Parcial — criterios documentados y experiencia de uso propia. No es un benchmark ni una comparación de rendimiento medida.
->
 > **Propósito:** decidir dónde ejecutar cada carga de trabajo sin convertir la elección en una preferencia ideológica.
 
 ## 1. La pregunta correcta
