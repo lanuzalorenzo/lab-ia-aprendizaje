@@ -22,7 +22,7 @@ Aquí se escribe como **ingeniero de IA aplicada con criterio de seguridad**: se
 
 ## Contrato editorial
 
-El contrato completo —apertura llana, jerga, estados, evidencias y claridad que no cambia lo que se afirma— está en [portfolio-ciberseguridad-lorenzo](https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/blob/main/AGENTS.md). En este repo: español claro, estados explícitos en experimentos y resultados (Validado · Parcial · Runbook preparado · Diseño · Pendiente); las guías no llevan estado propio. Separación entre lo medido y el hallazgo; un hallazgo no es un PASS.
+El contrato completo —apertura llana, jerga, estados, evidencias y claridad que no cambia lo que se afirma— está en [portfolio-ciberseguridad-lorenzo](https://github.com/lanuzalorenzo/portfolio-ciberseguridad-lorenzo/blob/main/AGENTS.md). En este repo: español claro, estados explícitos en experimentos y resultados (Validado · Parcial · Runbook preparado · Diseño · Pendiente); las guías no llevan estado propio. **Validado el uso** es un matiz de Validado: se ejecutó y se observó, sin reproducibilidad declarada; no equivale a un PASS. Separación entre lo medido y el hallazgo; un hallazgo no es un PASS.
 
 ## Gobernanza
 
