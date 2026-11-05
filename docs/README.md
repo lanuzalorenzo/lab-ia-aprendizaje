@@ -29,6 +29,7 @@ Marcos de evaluación, decisiones y comparativas.
 | [`ai-security-evaluation.md`](referencia/ai-security-evaluation.md) | Evaluación de calidad y seguridad de funciones con LLM: conjunto dorado, inyección, métricas y CI |
 | [`prompt-robustness-testing.md`](referencia/prompt-robustness-testing.md) | Diseño de la matriz de perturbación: canarios C0–C4, familias F1–F4, niveles N0–N3 y métricas de evasión |
 | [`coste-contexto-y-optimizacion.md`](referencia/coste-contexto-y-optimizacion.md) | Consumo elevado de prompts, controles de optimización y prevención |
+| [`dimensionado-hardware-ia-local.md`](referencia/dimensionado-hardware-ia-local.md) | Qué modelo cabe en cada memoria, qué velocidad cabe esperar y cuándo compensa comprar el equipo |
 | [`opencode-vs-vscode-antigravity.md`](referencia/opencode-vs-vscode-antigravity.md) | Criterios de decisión: OpenCode frente a VS Code y Google Antigravity |
 | [`bitacora-decisiones-aprendizaje.md`](referencia/bitacora-decisiones-aprendizaje.md) | Memoria técnica: decisiones, incidentes, causa raíz y ejes de aprendizaje |
 

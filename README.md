@@ -22,6 +22,10 @@ Aprendo IA probando: levanto una herramienta, la uso en trabajo real y anoto qu�
 
 Cada uno abre con qué probé, qué salió y qué no está medido. Índice: [`docs/README.md`](docs/README.md).
 
+## Criterio
+
+- **Hardware:** qué modelo cabe en cada memoria, qué velocidad se puede esperar y cuándo compensa comprar el equipo frente a pagar por uso ([dimensionado](docs/referencia/dimensionado-hardware-ia-local.md)).
+
 ## Antes de usarlo
 
 - Ollama no escucha en `0.0.0.0` sin firewall; el `11434` no se abre a Internet.
