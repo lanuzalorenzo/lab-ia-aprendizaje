@@ -31,12 +31,11 @@ El contrato completo —apertura llana, jerga, estados, evidencias y claridad qu
 ## Verificación
 
 ```bash
-python3 scripts/check_links.py
 python3 -m compileall -q scripts
 gitleaks detect --source . --redact --verbose --exit-code 2
 ```
 
-Son los tres trabajos de `.github/workflows/ci.yml`: enlaces relativos, sintaxis de los scripts y secretos sobre el historial completo.
+La sintaxis de los scripts y los secretos se comprueban aquí; los enlaces y anclas, con la acción compartida de [`core`](https://github.com/lanuzalorenzo/core) desde `.github/workflows/ci.yml`.
 
 ## Commits
 
