@@ -8,7 +8,7 @@
 
 > Resumen añadido el 2026-11-04; los artefactos no cambian.
 
-> **Corrección (2026-11-05):** el estado pasa a Validado el uso en este equipo: la prueba se hizo y la observación es «funciona, lento». No se añaden mediciones ni se repite la prueba; se retira la lista de pasos pendientes. Cambia el estado y esa lista; el resto del registro se mantiene.
+> **Corrección (2026-11-05):** el estado pasa a Validado el uso en este equipo: la prueba se hizo y la observación es «funciona, lento». No se añaden mediciones ni se repite la prueba. Cambian el título, el estado, la lista de pasos pendientes y los límites; el resto del registro se mantiene.
 
 > **Fecha de registro:** 2026-10-30
 > **Fecha de la prueba:** no registrada
