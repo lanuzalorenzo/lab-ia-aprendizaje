@@ -117,7 +117,7 @@ La primera vez descarga el modelo. Después puedes escribir una pregunta y ver l
 - **Velocidad:** cuántos tokens por segundo produce. Un token es un trozo de palabra.
 - **Memoria:** `top` o `htop` muestran la RAM y la CPU. Si tienes tarjeta NVIDIA, `nvidia-smi` muestra su memoria.
 
-El modelo operativo del laboratorio es `qwen2.5-coder:7b`. Se probaron también Llama 3 y Mistral al inicio, sin dejar registro en el repositorio.
+El modelo operativo del laboratorio es `qwen2.5-coder:7b`. Se probó `llama3`; se previó probar `mistral` y `codellama`, sin resultados en el repositorio.
 
 ## 6. Seguridad antes de usarlo desde otro equipo
 
