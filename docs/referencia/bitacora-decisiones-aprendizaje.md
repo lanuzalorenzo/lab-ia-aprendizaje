@@ -13,6 +13,7 @@ Un laboratorio sin cuaderno de bitácora obliga a repetir los mismos tropiezos c
 7. [Entrada 07: Cifras de VRAM de terceros: la aritmética primero](#entrada-07-cifras-de-vram-de-terceros-la-aritmética-primero)
 8. [Entrada 08: Trabajo diario con OpenCode Go y local para datos restringidos](#entrada-08-trabajo-diario-con-opencode-go-y-local-para-datos-restringidos)
 9. [Entrada 09: Datos internos en el historial público](#entrada-09-datos-internos-en-el-historial-público)
+10. [Entrada 10: Sin servidores MCP en el laboratorio](#entrada-10-sin-servidores-mcp-en-el-laboratorio)
 
 ---
 
@@ -244,3 +245,19 @@ A eso se suma la caché del contexto (KV cache), que con ventanas largas puede o
   - Los commits antiguos pueden seguir visibles en las cachés de GitHub hasta que se soliciten.
 - **Pendiente:**
   - Pedir a GitHub Support que elimine de su caché los commits antiguos.
+
+---
+
+## Entrada 10: Sin servidores MCP en el laboratorio
+
+- **Fecha:** 2026-11-09
+- **Estado:** Parcial. La decisión está tomada y documentada; el coste del esquema no tiene medición reproducible.
+- **Contexto:** se valoró conectar servidores MCP al agente para llegar a sistemas externos sin escribir integraciones. Un piloto añadía del orden de 14,2 k tokens de esquema en cada petición, por encima del ahorro esperado, y con la ventana de 16K del modelo local ese esquema ocupa la sesión antes de empezar.
+- **Decisión:** no se conectan servidores MCP. El trabajo del laboratorio se resuelve con `grep`, `read` por rangos y `git`; cada conector sumaría además un destino de salida, credenciales y código de terceros.
+- **Consecuencias:**
+  - El criterio de adopción y el detalle de ventajas y costes quedan en [`servidores-mcp.md`](servidores-mcp.md).
+  - La decisión se revisa si aparece una tarea repetitiva que las alternativas resuelvan peor.
+
+- **Pendiente:**
+  - Medir el esquema de un servidor concreto y compararlo con el ahorro de una tarea real, si se retoma.
+
