@@ -38,16 +38,16 @@ Marcos de evaluación, decisiones y comparativas.
 
 Cada carpeta conserva sus artefactos originales y declara lo que falta. Si se corrige una página, se anota la fecha y el motivo en lugar de reescribir el registro.
 
-| Carpeta | Qué probé | Estado |
-|---|---|---|
-| [`2026-10-22-robustez-instrumento/`](experimentos/2026-10-22-robustez-instrumento/) | Que la prueba de robustez mide lo que dice: determinismo, inversa, testigo y factor de expansión. Sin modelo | Validado |
-| [`2026-10-22-robustez-ejecucion-v1/`](experimentos/2026-10-22-robustez-ejecucion-v1/) | `qwen2.5:3b` en N0 y N1. La orden directa funciona; obediencia 0,50 | Parcial |
-| [`2026-10-22-robustez-ejecucion-v2/`](experimentos/2026-10-22-robustez-ejecucion-v2/) | Línea base N0 con el instrumento corregido. La obediencia de 0,50 se replica | Parcial |
-| [`2026-10-26-robustez-prompt-v2/`](experimentos/2026-10-26-robustez-prompt-v2/) | Prompt endurecido en N0. La obediencia no cambia: las instrucciones no defienden a este modelo | Parcial |
-| [`2026-10-30-inferencia-7b-continue/`](experimentos/2026-10-30-inferencia-7b-continue/) | Integración de 7B con Continue: probada en este equipo; funciona y es lenta. Sin métricas | Validado (uso); sin medición |
-| [`2026-10-30-opencode-uso-real/`](experimentos/2026-10-30-opencode-uso-real/) | OpenCode v2.1.4 en esta máquina. No valida precios ni una instalación limpia | Validado (uso) |
-| [`2026-11-02-coste-contexto-sesiones/`](experimentos/2026-11-02-coste-contexto-sesiones/) | Reparto de coste de 30 días: el 98% de la entrada es relectura de caché | Validado (medición); variantes pendientes |
-| [`plantilla-experimento.md`](experimentos/plantilla-experimento.md) | Plantilla para registrar un experimento nuevo | — |
+| Carpeta | Qué probé |
+|---|---|
+| [`2026-10-22-robustez-instrumento/`](experimentos/2026-10-22-robustez-instrumento/) | Que la prueba de robustez mide lo que dice: determinismo, inversa, testigo y factor de expansión. Sin modelo |
+| [`2026-10-22-robustez-ejecucion-v1/`](experimentos/2026-10-22-robustez-ejecucion-v1/) | `qwen2.5:3b` en N0 y N1. La orden directa funciona; obediencia 0,50 |
+| [`2026-10-22-robustez-ejecucion-v2/`](experimentos/2026-10-22-robustez-ejecucion-v2/) | Línea base N0 con el instrumento corregido. La obediencia de 0,50 se replica |
+| [`2026-10-26-robustez-prompt-v2/`](experimentos/2026-10-26-robustez-prompt-v2/) | Prompt endurecido en N0. La obediencia no cambia: las instrucciones no defienden a este modelo |
+| [`2026-10-30-inferencia-7b-continue/`](experimentos/2026-10-30-inferencia-7b-continue/) | Integración de 7B con Continue: probada en este equipo; funciona y es lenta. Sin métricas |
+| [`2026-10-30-opencode-uso-real/`](experimentos/2026-10-30-opencode-uso-real/) | OpenCode v2.1.4 en esta máquina. No valida precios ni una instalación limpia |
+| [`2026-11-02-coste-contexto-sesiones/`](experimentos/2026-11-02-coste-contexto-sesiones/) | Reparto de coste de 30 días: el 98% de la entrada es relectura de caché |
+| [`plantilla-experimento.md`](experimentos/plantilla-experimento.md) | Plantilla para registrar un experimento nuevo |
 
 ## Arquitectura (`arquitectura/`)
 
