@@ -4,7 +4,7 @@
 
 Aprendo IA probando: levanto una herramienta, la uso en trabajo real y anoto qué sale. Empecé con un servidor propio y Ollama para no sacar datos de la red; hoy hay guías de agentes, experimentos con resultado y criterios sobre qué dato cruza la frontera. Nada de rankings ni comparativas sin medición.
 
-> **Estado (2026-11-05).** Cada experimento y cada resultado declara el suyo en su ficha; las guías no llevan estado. **Validado** significa que se ejecutó y hay resultado observado. Un hallazgo no es un PASS.
+> **Cómo se lee el estado.** Cada experimento y cada resultado declara el suyo en su ficha; las guías no llevan estado. **Validado** significa que se ejecutó y hay resultado observado. Un hallazgo no es un PASS.
 
 ## Guías
 
