@@ -4,7 +4,7 @@ Antes de comprar o alquilar una máquina para ejecutar modelos en casa hay que r
 
 Es como elegir una furgoneta para una mudanza: primero se mira si la carga entra en el maletero, después si el motor la mueve con soltura, y al final si compensa comprarla o alquilarla solo el día que hace falta. Una furgoneta enorme para llevar una caja dos veces al año sale carísima; alquilada por horas, barata.
 
-> **Estado: Parcial.** La aritmética de capacidad se puede comprobar con el tamaño real del archivo descargado. La velocidad es una estimación por ancho de banda y **no una medición propia**: en este repositorio no hay todavía ninguna cifra de tokens por segundo medida. El umbral de coste parte del experimento de coste de sesiones (Validado) y de supuestos de precio de hardware y electricidad que se declaran en el §6.
+> **Estado:** Parcial (2026-11-05). La aritmética de capacidad se puede comprobar con el tamaño real del archivo descargado. La velocidad es una estimación por ancho de banda y **no una medición propia**: en este repositorio no hay todavía ninguna cifra de tokens por segundo medida. El umbral de coste parte del experimento de coste de sesiones (Validado) y de supuestos de precio de hardware y electricidad que se declaran en el §6.
 
 > **La cuenta en una frase.** Un equipo capaz de mover modelos de 32B cuesta entre 44 y 66 € al mes contando luz y amortización; la factura de API de este laboratorio, con 162 sesiones en 30 días, es de 11,54 $, unos 11 €. Por debajo de 44 € al mes de gasto real, comprar hardware no se justifica con dinero: se justifica por la frontera del dato.
 

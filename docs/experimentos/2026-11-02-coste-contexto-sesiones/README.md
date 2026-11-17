@@ -9,6 +9,7 @@
 > Resumen añadido el 2026-11-04; el registro original no cambia.
 
 > **Estado:** Validado el reparto de coste de 30 días de sesiones en este equipo. **Pendiente** la comparación entre variantes de razonamiento: no hay todavía ninguna sesión con `low` ni con `high`.
+> **Evidencia:** [`scripts/utilidades/coste_sesiones_opencode.py`](../../../scripts/utilidades/coste_sesiones_opencode.py) sobre la base local de sesiones; comandos y muestra en §2 y §4.
 
 Una sesión con un agente no se paga por lo que responde, sino por todo lo que tiene que releer antes de responder. Es como volver a fotocopiar el expediente entero en cada consulta: el gasto está en el papel, no en la respuesta. Esta evidencia mide ese reparto sobre 30 días de uso real en este equipo.
 

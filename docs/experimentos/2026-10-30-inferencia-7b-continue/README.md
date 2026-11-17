@@ -13,6 +13,7 @@
 > **Fecha de registro:** 2026-10-30
 > **Fecha de la prueba:** no registrada
 > **Estado:** Validado el uso en este equipo, sin medición ni reproducibilidad; no el rendimiento
+> **Evidencia:** la observación fechada de [§Qué se observó](#qué-se-observó); no hay artefactos, como dice §Límites.
 > **Modelo:** `qwen2.5-coder:7b` (digest no registrado)
 > **Cliente:** Continue (versión no registrada)
 > **Endpoint:** placeholder de laboratorio; no se publica una IP real

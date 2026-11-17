@@ -1,6 +1,6 @@
 # OpenCode vs VS Code / Google Antigravity: criterios de decisión
 
-> **Estado:** Parcial. Comparativa orientada a privacidad, coste y control de contexto para elegir herramienta de agente. La elección de OpenCode Go para el trabajo diario se basa en la experiencia de uso propia, no en una medición. No es un benchmark; las afirmaciones sobre políticas de privacidad deben verificarse en las fuentes oficiales de cada proveedor.
+> **Estado:** Parcial (2026-11-02). Comparativa orientada a privacidad, coste y control de contexto para elegir herramienta de agente. La elección de OpenCode Go para el trabajo diario se basa en la experiencia de uso propia, no en una medición. No es un benchmark; las afirmaciones sobre políticas de privacidad deben verificarse en las fuentes oficiales de cada proveedor.
 
 ## 1. Propósito
 
