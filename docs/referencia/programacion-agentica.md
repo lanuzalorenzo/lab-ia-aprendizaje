@@ -59,7 +59,7 @@ La prueba rápida: si no puedes escribir el «hecho cuando» como un comando que
 - **Constancia.** Aplica la misma lista cada vez; un script no se cansa ni se salta el paso 4.
 - **Lectura rápida.** Recorre muchos archivos y cruza referencias que a una persona le costaría mantener en la cabeza.
 - **Contexto explícito.** Las reglas viven en archivos, no en la memoria de quien estuvo en la reunión.
-- **Exploración en paralelo.** Varios agentes de solo lectura pueden mirar partes distintas sin tocarse.
+- **Paralelismo con aislamiento.** Varios agentes trabajan a la vez si cada tarea tiene su rama o su `worktree`; el paralelismo multiplica la capacidad, no la revisión.
 - **Coste visible.** Tokens, caché y tiempo quedan registrados y se pueden medir.
 
 No promete código mejor ni criterio mejor. Promete ejecutar un criterio que ya existe, más veces y con menos fricción.
@@ -74,6 +74,7 @@ No promete código mejor ni criterio mejor. Promete ejecutar un criterio que ya 
 - **Mantenimiento de prompts.** Un comando es código: se duplica, se desincroniza y envejece.
 - **Evidencia falsa.** Presentar un diseño o un runbook como si se hubiera ejecutado.
 - **Fuga de datos.** El contexto que se envía a un proveedor remoto puede llevar más de lo que se cree.
+- **Escritura en paralelo sin aislar.** Dos tareas sobre los mismos archivos se pisan; la fusión esconde el conflicto hasta que ya hay dos versiones de la misma decisión.
 
 ## 7. Controles
 
@@ -84,6 +85,7 @@ No promete código mejor ni criterio mejor. Promete ejecutar un criterio que ya 
 5. **Higiene de contexto.** Instrucciones compactas, estado en archivos, salida de herramientas acotada y compactación.
 6. **Un dueño por regla.** Si dos archivos dicen lo mismo, uno manda y el otro enlaza; se sincroniza y se valida. Con varios repositorios, lo común sube a una sola capa y cada uno conserva lo suyo; cómo se reparte está en [`agents-md-publico-privado`](../guias/agents-md-publico-privado.md).
 7. **Registro y auditoría.** Queda quién hizo qué y con qué permiso; los logs no llevan secretos.
+8. **Autonomía graduada.** El permiso se ajusta al criterio de §3: cuanto menos se puede deshacer y más se propaga un fallo, menos se delega. En un paso con credenciales o permisos elevados, el agente prepara la secuencia y la persona ejecuta el último comando irreversible; el control 2 sigue valiendo para `commit`, `push`, despliegue y publicación.
 
 La lista se puede resumir en una pregunta: **¿qué puede tocar el agente si se equivoca, y cómo me entero?**
 
