@@ -14,6 +14,7 @@ Un laboratorio sin cuaderno de bitácora obliga a repetir los mismos tropiezos c
 8. [Entrada 08: Trabajo diario con OpenCode Go y local para datos restringidos](#entrada-08-trabajo-diario-con-opencode-go-y-local-para-datos-restringidos)
 9. [Entrada 09: Datos internos en el historial público](#entrada-09-datos-internos-en-el-historial-público)
 10. [Entrada 10: Sin servidores MCP en el laboratorio](#entrada-10-sin-servidores-mcp-en-el-laboratorio)
+11. [Entrada 11: El agente que ejecuta, encerrado](#entrada-11-el-agente-que-ejecuta-encerrado)
 
 ---
 
@@ -261,3 +262,22 @@ A eso se suma la caché del contexto (KV cache), que con ventanas largas puede o
 - **Pendiente:**
   - Medir el esquema de un servidor concreto y compararlo con el ahorro de una tarea real, si se retoma.
 
+
+---
+
+## Entrada 11: El agente que ejecuta, encerrado
+
+- **Fecha:** 2026-11-17
+- **Estado:** Validado el uso del mecanismo en este equipo; sin el agente real dentro.
+- **Contexto:** cuando el agente ejecuta órdenes en la misma máquina donde viven los repositorios, un error del modelo o una instrucción escondida en un archivo tienen el alcance de quien escribe el código.
+- **Decisión:** el agente que ejecuta va en un contenedor con usuario sin root, sin capacidades, raíz de solo lectura, el repositorio montado en `ro` y una red interna sin salida. La salida pasa por un proxy con lista de destinos. La credencial vive en un fichero que solo lee el proxy y no se monta en el sandbox.
+- **Por qué:**
+  - El aislamiento del sistema de archivos y de red se comprueba con comandos: `/etc/shadow` deniega, la raíz y el montaje son de solo lectura, no hay resolución externa ni ruta por IP.
+  - El uid del host y el del contenedor coinciden (1000), y con ese detalle un fichero 600 montado dentro se lee: probar el permiso no basta, hay que probar la identidad. Con otro uid la lectura se deniega.
+  - El tope de procesos corta sin aviso y no deja seguir: ver H-8 en el experimento.
+- **Consecuencias:**
+  - La medición y sus límites están en [`2026-11-17-contencion-agente-ejecucion`](../experimentos/2026-11-17-contencion-agente-ejecucion/).
+  - La [hoja de ruta](hoja-de-ruta-seguridad-asistentes.md) separa este mecanismo de los despliegues en contenedores, que siguen aparcados.
+- **Pendiente:**
+  - Probar al agente real dentro de la política, no solo comandos equivalentes.
+  - Medir el perfil seccomp propio y la variante de microVM.

@@ -47,6 +47,7 @@ Cada carpeta conserva sus artefactos originales y declara lo que falta. Si se co
 | [`2026-10-30-inferencia-7b-continue/`](experimentos/2026-10-30-inferencia-7b-continue/) | Integración de 7B con Continue: probada en este equipo; funciona y es lenta. Sin métricas |
 | [`2026-10-30-opencode-uso-real/`](experimentos/2026-10-30-opencode-uso-real/) | OpenCode v2.1.4 en esta máquina. No valida precios ni una instalación limpia |
 | [`2026-11-02-coste-contexto-sesiones/`](experimentos/2026-11-02-coste-contexto-sesiones/) | Reparto de coste de 30 días: el 98% de la entrada es relectura de caché |
+| [`2026-11-17-contencion-agente-ejecucion/`](experimentos/2026-11-17-contencion-agente-ejecucion/) | Encerrar al agente que ejecuta: red cerrada, disco de solo lectura y credencial fuera de su alcance |
 | [`plantilla-experimento.md`](experimentos/plantilla-experimento.md) | Plantilla para registrar un experimento nuevo |
 
 ## Arquitectura (`arquitectura/`)

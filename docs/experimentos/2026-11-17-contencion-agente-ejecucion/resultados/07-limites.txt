@@ -1,0 +1,2 @@
+== Configuración efectiva del contenedor ==
+Pids=128 Memoria=268435456 Swap=268435456 Cpu=1000000000 CapDrop=[ALL] SecurityOpt=[no-new-privileges] Red=contencion-interna-90413 SoloLectura=true

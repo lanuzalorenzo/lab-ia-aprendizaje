@@ -1,0 +1,2 @@
+== Límite de memoria (se espera 137 por OOM) ==
+codigo-salida=137 oom-killed=true

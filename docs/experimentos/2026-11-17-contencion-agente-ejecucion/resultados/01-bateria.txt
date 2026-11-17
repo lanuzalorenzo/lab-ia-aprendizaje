@@ -1,0 +1,22 @@
+== Batería dentro del contenedor ==
+CHECK usuario-sin-root             esperado=uid distinto de 0                          observado=uid=1000                                       veredicto=ok
+CHECK capacidades-y-seccomp        esperado=CapEff=0 NoNewPrivs=1 Seccomp=2            observado=CapEff=0000000000000000 NoNewPrivs=1 Seccomp=2 veredicto=ok
+CHECK lectura-etc-shadow           esperado=denegado                                   observado=cat: can't open '/etc/shadow': Permission denied veredicto=ok
+CHECK escritura-en-raiz            esperado=denegada (raíz de solo lectura)           observado=touch: /archivo-en-raiz: Read-only file system veredicto=ok
+CHECK escritura-en-tmp             esperado=permitida                                  observado=touch /tmp/archivo                             veredicto=ok
+CHECK montajes-del-host            esperado=ninguno bajo /home                         observado=entradas=48 bajo-home=0                        veredicto=ok
+CHECK montaje-repositorio          esperado=visible en /repo y ro                      observado=opciones=ro,relatime                           veredicto=ok
+CHECK escritura-en-montaje         esperado=denegada (montaje de solo lectura)         observado=touch: /repo/prueba-de-escritura: Read-only file system veredicto=ok
+CHECK entorno-sin-token            esperado=TOKEN_DEL_HOST ausente                     observado=presente=0                                     veredicto=ok
+CHECK testigo-pasado               esperado=TESTIGO visible dentro                     observado=presente=1                                     veredicto=ok
+CHECK credencial-fuera-del-entorno esperado=valor ausente del entorno                  observado=coincidencias=0                                veredicto=ok
+CHECK socket-docker                esperado=ausente                                    observado=ls: /var/run/docker.sock: No such file or directory veredicto=ok
+CHECK procesos-visibles            esperado=solo los del contenedor                    observado=lineas=5 pid1=sh                               veredicto=ok
+CHECK salida-directa               esperado=sin ruta a Internet                        observado=curl: (6) Could not resolve host: example.com  veredicto=ok
+CHECK dns-externo                  esperado=sin resolución externa                    observado=                                               veredicto=ok
+CHECK salida-por-ip                esperado=sin ruta a Internet                        observado=curl: (7) Failed to connect to 1.1.1.1 port 443 after 0 ms: Could not connect to server veredicto=ok
+CHECK proxy-host-permitido         esperado=200 y cabecera inyectada                   observado=codigo=200 {"ruta": "/", "cabeceras": {"Accept-Encoding": "identity", "User-Agent": "curl/8.14.1", "Accept": "*/*", "Host": "eco:9000", "Authorization": "Bearer token-de-prueba-no-es-un-secreto"}} veredicto=ok
+CHECK proxy-host-denegado          esperado=403 del proxy                              observado=codigo=403                                     veredicto=ok
+CHECK proxy-connect-denegado       esperado=rechazo del proxy en el túnel             observado=curl: (56) CONNECT tunnel failed, response 403 veredicto=ok
+FIN DE LA BATERIA fallos=0
+codigo-salida=0

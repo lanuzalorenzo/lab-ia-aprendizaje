@@ -1,0 +1,6 @@
+== Registro del proxy ==
+PROXY escuchando en 8080; permitidos: ['eco:9000']
+PROXY GET eco:9000 200
+PROXY GET eco:9000 200
+PROXY GET example.com 403
+PROXY CONNECT example.com:443 403
