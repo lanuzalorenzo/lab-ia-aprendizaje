@@ -15,6 +15,7 @@ Un laboratorio sin cuaderno de bitácora obliga a repetir los mismos tropiezos c
 9. [Entrada 09: Datos internos en el historial público](#entrada-09-datos-internos-en-el-historial-público)
 10. [Entrada 10: Sin servidores MCP en el laboratorio](#entrada-10-sin-servidores-mcp-en-el-laboratorio)
 11. [Entrada 11: El agente que ejecuta, encerrado](#entrada-11-el-agente-que-ejecuta-encerrado)
+12. [Entrada 12: Prompts de terceros como material, no como contenido](#entrada-12-prompts-de-terceros-como-material-no-como-contenido)
 
 ---
 
@@ -281,3 +282,21 @@ A eso se suma la caché del contexto (KV cache), que con ventanas largas puede o
 - **Pendiente:**
   - Probar al agente real dentro de la política, no solo comandos equivalentes.
   - Medir el perfil seccomp propio y la variante de microVM.
+
+---
+
+## Entrada 12: Prompts de terceros como material, no como contenido
+
+- **Fecha:** 2026-11-17
+- **Estado:** Diseño. La decisión está tomada; la medición que la aprovecha no se ha ejecutado.
+- **Contexto:** llegó una colección de prompts de seguridad mapeados a marcos conocidos: NIST CSF 2.0 para riesgos y activos, CVSS v4.0 con CISA KEV para parches, MITRE ATT&CK para amenazas, OWASP Top 10 para código, NIST SP 800-61 para respuesta a incidentes, CIS Benchmarks para endurecimiento y NIST SP 800-207 para Zero Trust, con una nota final de anonimizar datos antes de usarlos en IA externa. Del material solo era legible el índice: los prompts no se podían abrir sin sesión, así que no están evaluados.
+- **Decisión:** no entra como guía ni como contenido del repositorio. Queda como material de entrada del experimento de frontera de datos de la [hoja de ruta](hoja-de-ruta-seguridad-asistentes.md), para cuando se ejecute.
+- **Por qué:**
+  - Un prompt que ordena aplicar un marco sin inventario, versiones ni alcance devuelve un texto con tono de auditoría que no se puede comprobar, y contra un marco grande invita a numerar controles que no existen. Es deducción, no medición.
+  - La lista de marcos no aporta nada que no esté en los propios marcos. Lo que sí aporta es la forma: un prompt del tamaño que se pega en la práctica, útil como carga realista en una prueba de qué sale del equipo.
+  - Dos advertencias que acompañaban al material se incorporan al criterio: el OWASP Top 10 es concienciación y no un set de pruebas —para probar están ASVS y el Testing Guide—, y una salida de IA no es evidencia de que un control esté implantado. Lo segundo ya era la línea del repositorio.
+- **Consecuencias:**
+  - Si el experimento se ejecuta, el prompt se usa con un inventario inventado y marcadores señuelo, y se cita el marco, no el material de origen.
+  - El material no se publica ni se enlaza.
+- **Pendiente:**
+  - Ejecutar el experimento 1 de la hoja de ruta con este prompt como carga realista.
