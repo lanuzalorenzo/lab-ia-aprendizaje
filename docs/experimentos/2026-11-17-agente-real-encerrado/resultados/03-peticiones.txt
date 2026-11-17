@@ -1,0 +1,4 @@
+== Peticiones que recibió el destino local ==
+ECO #1 POST /v1/chat/completions ECO cuerpo=2133B modelo=eco roles=system,user herramientas=0 marcador=no
+ECO #2 POST /v1/chat/completions ECO cuerpo=24518B modelo=eco roles=system,user herramientas=13 marcador=no
+ECO #3 POST /v1/chat/completions ECO cuerpo=24796B modelo=eco roles=system,user,assistant,tool herramientas=13 marcador=si

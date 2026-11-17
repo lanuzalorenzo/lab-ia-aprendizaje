@@ -1,0 +1,3 @@
+== Fase 1: sin red ==
+codigo-salida=124
+message="Failed to fetch models.dev" cause="Cause([Fail(HttpClientError: Transport error (GET https://models.opencode.ai/experimental/v2.0/api.json?type=chat,decision,image) (cause: TypeError: getaddrinfo EAI_AGAIN models.opencode.ai))])" http.span=1078 role=server

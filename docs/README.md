@@ -48,6 +48,7 @@ Cada carpeta conserva sus artefactos originales y declara lo que falta. Si se co
 | [`2026-10-30-opencode-uso-real/`](experimentos/2026-10-30-opencode-uso-real/) | OpenCode v2.1.4 en esta máquina. No valida precios ni una instalación limpia |
 | [`2026-11-02-coste-contexto-sesiones/`](experimentos/2026-11-02-coste-contexto-sesiones/) | Reparto de coste de 30 días: el 98% de la entrada es relectura de caché |
 | [`2026-11-17-contencion-agente-ejecucion/`](experimentos/2026-11-17-contencion-agente-ejecucion/) | Encerrar al agente que ejecuta: red cerrada, disco de solo lectura y credencial fuera de su alcance |
+| [`2026-11-17-agente-real-encerrado/`](experimentos/2026-11-17-agente-real-encerrado/) | El agente real dentro de la política: qué pide sin red y qué envía antes de leer un archivo |
 | [`plantilla-experimento.md`](experimentos/plantilla-experimento.md) | Plantilla para registrar un experimento nuevo |
 
 ## Arquitectura (`arquitectura/`)

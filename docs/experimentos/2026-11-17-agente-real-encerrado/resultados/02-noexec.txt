@@ -1,0 +1,3 @@
+== Fase 2: temporal sin ejecución ==
+codigo-salida=1
+Failed to initialize OpenTUI render library: Failed to open library \
