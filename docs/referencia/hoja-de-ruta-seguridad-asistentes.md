@@ -45,13 +45,14 @@ Queda fuera: rankings de modelos, *AI red teaming* genérico, certificaciones, R
 - **Cómo:** baseline sin política y después con política; intentos controlados de leer fuera del repo, escribir y abrir red.
 - **Evidencia:** antes y después, comando que demuestra el corte, política versionada y límites residuales.
 - **Criterio:** la política se aplica y se puede comprobar; no se confunde «el agente no quiso» con «el agente no pudo».
+- **Base medida:** el encierro del proceso está probado sin modelo en [`2026-11-17-contencion-agente-ejecucion`](../experimentos/2026-11-17-contencion-agente-ejecucion/). Queda por medir el alcance del agente real con esa política y lo que no cubre el núcleo compartido.
 
 ## 4. Dependencias y orden
 
 1. Cerrar la Fase 0 antes de añadir páginas nuevas.
 2. Cerrar la Fase 1 antes de los experimentos: sin modelo reproducible y sin endpoint controlado, las pruebas no son comparables.
 3. Ejecutar 1 → 2 → 3. La frontera de datos informa qué cliente y qué endpoint se usan; la inyección necesita ese cliente; los permisos necesitan el mismo entorno.
-4. No abrir RAG, *squad*, contenedores ni comparativas de modelos hasta cerrar la Fase 4. Son líneas legítimas, pero no sostienen el eje.
+4. No abrir RAG, *squad*, despliegues en contenedores ni comparativas de modelos hasta cerrar la Fase 4. Son líneas legítimas, pero no sostienen el eje. Queda fuera de esa espera el mecanismo de aislamiento del agente que ejecuta —usuario, capacidades, sistema de archivos, red y credenciales—: no depende de un modelo reproducible y se mide por separado.
 
 ## 5. Reglas de evidencia
 

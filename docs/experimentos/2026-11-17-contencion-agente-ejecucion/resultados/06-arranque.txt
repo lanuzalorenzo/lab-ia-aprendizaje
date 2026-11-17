@@ -1,0 +1,6 @@
+== Coste de arranque (5 ejecuciones) ==
+ejecucion=1 ms=355
+ejecucion=2 ms=356
+ejecucion=3 ms=362
+ejecucion=4 ms=366
+ejecucion=5 ms=368

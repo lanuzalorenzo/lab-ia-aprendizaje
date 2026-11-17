@@ -1,0 +1,5 @@
+== Pausa y reanudación: ¿sobrevive el estado en memoria? ==
+1118ba4066f4f6c35455dc0b819b1ed53843e4be6e3d9e2f9c0039dc9636a74d
+agente-pausa-90413
+agente-pausa-90413
+contenido-tras-reanudar: estado-en-memoria

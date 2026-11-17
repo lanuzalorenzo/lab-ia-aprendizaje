@@ -1,0 +1,13 @@
+== Construcción de la imagen ==
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+sha256:2a26a4c25102b0e5c04b45b15f3249d0941d43c7309aadd6cba9a2715051c71b
+imagen: sha256:2a26a4c25102b0e5c04b45b15f3249d0941d43c7309aadd6cba9a2715051c71b
+== Redes ==
+11634517add23cf547cdd40d0d9d4421225df596ea22febcfd7e4994b829d7a7
+83a3b66f5de58f6fc304087a5a107dd99f7f6473daa9f6868110d06526adc6f3
+95ad647440d3143a3c6bd4cffedc72b014a521f7b4a2d7b1f102c8f232fb2ae0
+5a0b51894f346859222f0ec7599fd335ac495c944f154beb82f0db6a3c2764ac
+PROXY escuchando en 8080; permitidos: ['eco:9000']

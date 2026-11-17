@@ -1,0 +1,7 @@
+== Credencial: ¿qué pasa si el fichero llega al contenedor? ==
+permisos-en-el-host: 600 1000
+token-de-prueba-no-es-un-secreto
+uid=1000 codigo-salida=0
+cat: can't open '/run/token': Permission denied
+
+uid=1500 codigo-salida=1

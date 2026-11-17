@@ -1,0 +1,3 @@
+== Límite de procesos: 200 peticiones con tope de 32 ==
+sh: can't fork: Resource temporarily unavailable
+pedidos=200 arrancados=31 tope=32 codigo-salida=2

@@ -1,0 +1,3 @@
+== Persistencia: escribir y volver a entrar ==
+cat: can't open '/tmp/huella': No such file or directory
+codigo-salida=1 (1 significa que la huella ya no existe)
