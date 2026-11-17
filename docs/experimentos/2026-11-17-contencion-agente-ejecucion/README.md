@@ -6,7 +6,8 @@
 
 **Qué no está medido:** el escape por fallo del kernel, porque el núcleo sigue siendo el del host; el comportamiento con el agente real dentro y no solo con comandos equivalentes; el perfil seccomp ajustado; y el coste con una imagen de trabajo en vez de una mínima.
 
-> **Estado:** Validado el uso del mecanismo en este equipo el 2026-11-17. Se ejecutó y se observó; no hay reproducibilidad declarada en otro equipo. No valida el aislamiento frente a un fallo del kernel ni sustituye a la prueba de permisos del agente real.
+> **Estado:** Validado el uso del mecanismo en este equipo el 2026-11-17.
+> **Evidencia:** [resultados de la pasada](resultados/01-bateria.txt) y el resto de `resultados/00` a `resultados/09`, con [el guion de la prueba](pruebas.sh). Se ejecutó y se observó; no hay reproducibilidad declarada en otro equipo. No valida el aislamiento frente a un fallo del kernel ni sustituye a la prueba de permisos del agente real.
 
 Con el agente ejecutando órdenes en la misma máquina donde viven los repositorios, un error de criterio del modelo o una instrucción escondida en un archivo tienen el mismo alcance que si los escribiera yo. Encerrarlo no lo hace más listo: reduce lo que puede tocar cuando se equivoca. Es la diferencia entre un taller con las herramientas guardadas y uno con la puerta abierta a la calle.
 
