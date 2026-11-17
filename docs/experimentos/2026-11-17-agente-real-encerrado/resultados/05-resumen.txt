@@ -1,0 +1,4 @@
+codigo-salida=0
+Crudo de las peticiones: no se publica; contiene el prompt de sistema del agente.
+Guardado solo durante la pasada en un directorio temporal y borrado al terminar.
+peticiones guardadas: 3

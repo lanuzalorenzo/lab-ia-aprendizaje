@@ -31,6 +31,7 @@ Queda fuera: rankings de modelos, *AI red teaming* genérico, certificaciones, R
 - **Cómo:** prompt controlado, captura en el host o en un entorno aislado, comparación local frente a híbrido, prueba sin red.
 - **Evidencia:** tabla saneada de destinos, fecha, cliente, configuración redactada y conclusión. Sin IPs internas ni prompts sensibles.
 - **Criterio:** se puede decir qué sale y qué no, con una prueba reproducible; no se extrapola a otros clientes.
+- **Base medida:** el agente real dentro del encierro pide dos destinos antes de trabajar y manda su prompt de sistema y los esquemas de herramientas antes de leer nada, en [`2026-11-17-agente-real-encerrado`](../experimentos/2026-11-17-agente-real-encerrado/). Falta lo que sale al leer archivos.
 
 ### Experimento 2: inyección desde el repositorio
 

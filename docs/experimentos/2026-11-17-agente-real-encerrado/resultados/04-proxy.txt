@@ -1,0 +1,6 @@
+== Trace del proxy ==
+PROXY escuchando en 8080; permitidos: ['eco:9000', 'models.opencode.ai:443', 'opencode.ai:443', 'registry.npmjs.org:443']
+PROXY CONNECT models.opencode.ai:443 200
+PROXY POST eco:9000 200
+PROXY POST eco:9000 200
+PROXY POST eco:9000 200
