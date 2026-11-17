@@ -9,6 +9,7 @@
 > Resumen añadido el 2026-11-04; el registro original no cambia.
 
 > **Estado:** Validado el uso de la herramienta en esta máquina. No valida precios, planes ni los demás métodos de instalación.
+> **Evidencia:** [guía OpenCode desde cero](../../guias/opencode-desde-cero.md), creada en la sesión; el SHA-256 de §3 es de la versión registrada y la guía vigente se reescribió después.
 > **Corrección (2026-10-30, misma fecha):** la guía `docs/guias/opencode-desde-cero.md` se reescribió después de este registro. Ver la sección 10.
 
 ## 1. Metadatos

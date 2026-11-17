@@ -1,6 +1,6 @@
 # Cómo evaluar una función con un modelo de lenguaje
 
-> **Estado:** Diseño, con una excepción medida. La parte de seguridad tiene una primera pasada real sobre un modelo pequeño: ver [robustez de prompts](prompt-robustness-testing.md). El resto no se ha ejecutado.
+> **Estado:** Diseño (2026-10-30). Con una excepción medida. La parte de seguridad tiene una primera pasada real sobre un modelo pequeño: ver [robustez de prompts](prompt-robustness-testing.md). El resto no se ha ejecutado.
 >
 > **Propósito:** definir cómo se evalúa una función que usa un modelo de lenguaje (en adelante, LLM) antes de darla por útil y segura, tanto si el modelo corre en local como si es remoto.
 

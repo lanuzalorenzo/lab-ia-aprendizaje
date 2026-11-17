@@ -1,6 +1,6 @@
 # Hoja de ruta: seguridad de asistentes en local
 
-> **Estado:** Diseño. Fase 0 en revisión (actualizada el 2026-11-05). No hay resultados de los tres experimentos; lo que aparece como pendiente no se presenta como validado.
+> **Estado:** Diseño (2026-11-05). Fase 0 en revisión. No hay resultados de los tres experimentos; lo que aparece como pendiente no se presenta como validado. La validación llega cuando los tres experimentos de la fase 1 tengan resultado y evidencia fechada.
 >
 > **Alcance:** este repositorio, con Ollama y un cliente de desarrollo (Continue u OpenCode). La inferencia local es la plataforma de pruebas. El eje de esta hoja de ruta es la seguridad del asistente: qué datos salen, qué obedece y qué puede tocar.
 

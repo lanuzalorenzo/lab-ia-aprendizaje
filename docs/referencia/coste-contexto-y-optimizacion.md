@@ -1,6 +1,6 @@
 # Coste de contexto y optimización de prompts
 
-> **Estado:** Diseño. Marco de referencia para controlar el consumo de tokens y el coste de contexto en sesiones con agentes. No es una evidencia de ejecución; describe riesgos, controles y verificación.
+> **Estado:** Diseño (2026-11-09). Marco de referencia para controlar el consumo de tokens y el coste de contexto en sesiones con agentes. No es una evidencia de ejecución; describe riesgos, controles y verificación.
 
 ## 1. El riesgo
 

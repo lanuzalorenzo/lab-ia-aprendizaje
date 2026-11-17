@@ -1,6 +1,6 @@
 # Servidores MCP: qué son, qué aportan y por qué no compensan aquí
 
-> **Estado:** Parcial. Decisión tomada y piloto ejecutado; el coste del esquema no tiene medición reproducible adjunta.
+> **Estado:** Parcial (2026-11-09). Decisión tomada y piloto ejecutado; el coste del esquema no tiene medición reproducible adjunta.
 
 Un servidor MCP da al asistente acceso a otro sistema —archivos, una base de datos, un repositorio remoto— sin escribir una integración distinta para cada cliente. Funciona como un adaptador de corriente universal: el mismo enchufe sirve para varios aparatos, pero ocupa sitio en la regleta aunque no lo uses. En este laboratorio el adaptador no compensa, porque el asistente ya llega a lo que necesita con `grep` y `read`, y el esquema de un servidor grande consume casi toda la ventana de un modelo local.
 
