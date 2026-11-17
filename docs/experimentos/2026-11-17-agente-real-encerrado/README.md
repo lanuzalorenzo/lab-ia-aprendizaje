@@ -6,7 +6,7 @@
 
 **Qué no está medido:** el comportamiento con un proveedor real de modelos, el modo interactivo completo y el coste de una tarea larga.
 
-> **Estado:** Validado el uso con un modelo falso local. Se ejecutó el agente real en el encierro y se observó qué envía; no hay llamada a ningún proveedor externo ni medición de coste.
+> **Estado:** Validado el uso (2026-11-17), con los artefactos de [`resultados/`](resultados/). Se ejecutó el agente real en el encierro y se observó qué envía; no hay llamada a ningún proveedor externo ni medición de coste.
 
 Antes de encerrar al agente conviene saber qué necesita. Si al cerrar la red deja de arrancar, el encierro no es una política: es una pared. Y si al abrirla mínimamente manda veinticuatro kilobytes de instrucciones antes de leer nada, eso también es parte de la frontera de datos, aunque no sea un archivo del repositorio.
 
