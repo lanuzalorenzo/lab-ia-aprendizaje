@@ -1,6 +1,6 @@
 # Skills de agente: qué son, qué aportan y por qué no compensan aquí
 
-> **Estado:** Diseño (2026-11-18). La adopción sigue **Pendiente**: no hay ninguna skill escrita, cargada ni medida, así que el criterio es una deducción y no un resultado. Lo que lo cambiaría: publicar una skill que otro pueda instalar, o encontrar un procedimiento largo, condicional y con juicio que ninguna comprobación cubra.
+> **Estado:** Diseño (2026-11-18). La adopción sigue **Pendiente**: no hay ninguna skill escrita, cargada ni medida, así que el criterio es una deducción y no un resultado. Lo que lo validaría: publicar una skill que otro pueda instalar, o encontrar un procedimiento largo, condicional y con juicio que ninguna comprobación cubra.
 
 Un `AGENTS.md` es el manual de la oficina: está siempre encima de la mesa y se lee entero cada vez que el cliente lo carga, aunque sea para no usarlo. Una skill es la ficha que se saca del cajón cuando toca hacer esa cosa concreta: no ocupa sitio en la mesa y no se lee si no se va a usar. Esa diferencia —estar siempre o aparecer cuando hace falta— es lo que aporta el formato y lo que cuesta.
 
