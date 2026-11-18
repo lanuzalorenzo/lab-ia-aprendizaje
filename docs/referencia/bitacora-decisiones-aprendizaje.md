@@ -16,6 +16,7 @@ Un laboratorio sin cuaderno de bitácora obliga a repetir los mismos tropiezos c
 10. [Entrada 10: Sin servidores MCP en el laboratorio](#entrada-10-sin-servidores-mcp-en-el-laboratorio)
 11. [Entrada 11: El agente que ejecuta, encerrado](#entrada-11-el-agente-que-ejecuta-encerrado)
 12. [Entrada 12: Prompts de terceros como material, no como contenido](#entrada-12-prompts-de-terceros-como-material-no-como-contenido)
+13. [Entrada 13: Sin skills de agente, por ahora](#entrada-13-sin-skills-de-agente-por-ahora)
 
 ---
 
@@ -300,3 +301,22 @@ A eso se suma la caché del contexto (KV cache), que con ventanas largas puede o
   - El material no se publica ni se enlaza.
 - **Pendiente:**
   - Ejecutar el experimento 1 de la hoja de ruta con este prompt como carga realista.
+
+---
+
+## Entrada 13: Sin skills de agente, por ahora
+
+- **Fecha:** 2026-11-18
+- **Estado:** Diseño. El criterio está escrito; la adopción sigue Pendiente y no hay ninguna skill escrita, cargada ni medida.
+- **Contexto:** el formato de skills de agente propone empaquetar un procedimiento en una carpeta para que el asistente lo cargue cuando la descripción encaje con el encargo. Antes de adoptarlo había que saber qué aporta sobre las instrucciones del repositorio, los comandos, los agentes y las comprobaciones que ya se usan.
+- **Decisión:** no se adoptan skills en los repositorios públicos por ahora. El criterio completo está en [`skills-de-agente.md`](skills-de-agente.md).
+- **Por qué:**
+  - Las cuatro condiciones de adopción —condicional, con juicio, largo y sin comprobador— no las cumple hoy ningún procedimiento de estos repositorios: lo que se repite está en el `AGENTS.md` y lo que se puede comprobar está en el `pipeline`.
+  - Solo el nombre y la descripción de cada skill viajan en cada turno, se usen o no, y ese coste crece con cada skill instalada.
+  - Una skill que no carga no avisa: el procedimiento se da por hecho sin haberse ejecutado nunca.
+  - Cada skill sería un segundo dueño de una regla que ya tiene uno.
+- **Consecuencias:**
+  - La comprobación del 2026-11-18 no encontró ningún `SKILL.md` en los repositorios públicos: la decisión describe el estado real, no un cambio pendiente.
+  - Si aparece un procedimiento que cumpla las cuatro condiciones, se escribe la skill y se mide antes de extenderla.
+- **Pendiente:**
+  - Medir qué cambia en el resultado de un agente con la skill delante y sin ella, con el mismo encargo.
