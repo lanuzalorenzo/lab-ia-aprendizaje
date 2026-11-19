@@ -1,0 +1,9 @@
+PRIMITIVA /usr/bin/gnumkdir        rondas=200 dos-creadores-con-exito=0 veredicto=ok
+CHECK c0-control-sin-reclamo             exitos=0/0 lineas=1 una-marca veredicto=ok
+CHECK c1-competicion-mismo-item          rondas=20 una-sola=20        veredicto=ok
+CHECK c2-tope-tres-sesiones              sesiones=3 cuarta=tope       veredicto=ok
+CHECK c3-una-sesion-un-item              segundo=dos-items item-2=libre veredicto=ok
+CHECK c4-liberar-y-reclamar              primero=principal segundo=delta veredicto=ok
+CHECK c5-reclamo-sin-senal               estado=sin-senal refresco=viva liberado=no veredicto=ok
+CHECK c6-caida-a-mitad                   muerte=137 siguiente=ocupado estado=sin-senal veredicto=ok
+FIN fallos=0

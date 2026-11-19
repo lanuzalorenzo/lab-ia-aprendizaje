@@ -1,0 +1,3 @@
+PRIMITIVA mkdir                    rondas=200 dos-creadores-con-exito=11
+PRIMITIVA /usr/bin/gnumkdir        rondas=200 dos-creadores-con-exito=0
+ERROR /no/existe no crea directorios; no se puede medir
