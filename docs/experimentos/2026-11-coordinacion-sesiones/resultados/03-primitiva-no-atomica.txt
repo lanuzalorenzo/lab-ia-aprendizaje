@@ -1,0 +1,3 @@
+PRIMITIVA mkdir                    rondas=200 dos-creadores-con-exito=13
+ABORTA: mkdir no es atomico: dos creadores en 13 de 200 rondas
+codigo=2
