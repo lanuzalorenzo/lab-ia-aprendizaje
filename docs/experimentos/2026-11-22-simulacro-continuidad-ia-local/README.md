@@ -50,7 +50,7 @@ Artefactos generados:
 
 - `salida-simulacro.txt` — salida del guion, sin secuencias de control.
 - Volumen `ollama-simulacro` — pesos del servidor; `ollama-restaurado` — la copia restaurada.
-- `/tmp/opencode/simulacro/ollama-models-2026-11-22.tar.gz` — copia de los pesos en el mismo equipo, no fuera de él.
+- `/tmp/opencode/simulacro/ollama-models-2026-11-22.tar.gz` — copia de los pesos en el mismo equipo, no fuera de él; no se conserva, porque el cierre de sesión vacía `/tmp/opencode`.
 
 ## 3. Qué mide y qué no
 
@@ -90,7 +90,7 @@ Artefactos generados:
 | Modelo de reserva (`qwen2.5:3b`) | volumen `ollama-simulacro` | 1,93 GB | `5ee4f07cdb9b…` | 2026-11-22 |
 | Cliente de prueba | imagen `curlimages/curl:8.11.1` | 32,3 MB | `8.11.1` | 2026-11-22 |
 | Cliente de trabajo | OpenCode 2.3.2, binario montado en el contenedor | 242 MB | `2.3.2` | 2026-11-22 |
-| Copia local de los pesos | `/tmp/opencode/simulacro/ollama-models-2026-11-22.tar.gz` | 1,8 GB | `4baefd1d…` | 2026-11-22 |
+| Copia de prueba de los pesos | `/tmp/opencode/simulacro/ollama-models-2026-11-22.tar.gz`, que no se conserva: el cierre vacía `/tmp/opencode` | 1,8 GB | `4baefd1d…` | 2026-11-22 |
 | Copia fuera de la máquina | — | ninguna | — | — |
 
 La imagen de Ollama pesa 5,68 GB, pero no es comparable con la estimación de 1–2 GB de la guía: la imagen trae la base y las librerías CUDA y ROCm. Un runtime instalado en el sistema no se midió aquí, porque esta máquina no tiene instalación de Ollama. Y el modelo operativo, el que de verdad hace falta, no está descargado en ningún sitio.
