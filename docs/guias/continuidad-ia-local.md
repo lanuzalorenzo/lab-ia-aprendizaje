@@ -36,11 +36,11 @@ Un corte de proveedor remoto no rompe la IA local. Rompe tres cosas, y solo una 
 
 La conclusión práctica es corta: **lo único irrecuperable sin red es lo que no se descargó**. El resto es configuración y ya está en el repositorio.
 
-Esto ya empezó, y solo hay que recogerlo: el entorno —RTX 3050 Laptop de 4096 MiB, i7-12700H, 31 GB de RAM, Ollama 0.40.8— y el identificador del manifiesto de `qwen2.5:3b` están registrados desde la primera ejecución (§0). Al identificador le falta el `sha256` del blob, que se anota en el §3. Son los datos que costaría más trabajo reconstruir que leer.
+Esto ya empezó, y solo hay que recogerlo: el entorno —RTX 3050 Laptop de 4096 MiB, i7-12700H, 31 GB de RAM, Ollama 0.40.8— y el identificador del manifiesto de `qwen2.5:3b` están registrados desde la primera ejecución (§0). El `sha256` del blob que faltaba quedó fijado en el simulacro del 22 de noviembre: `5ee4f07c…`, con el tamaño verificado en el [experimento](../experimentos/2026-11-22-simulacro-continuidad-ia-local/README.md#4-resultados). Son los datos que costaría más trabajo reconstruir que leer.
 
 ## 2. Inventario: qué debe estar en disco
 
-Cifras de orden de magnitud, no medidas en este repositorio. El simulacro (§7) las sustituye por las reales.
+Cifras de orden de magnitud, no medidas en este repositorio. El simulacro (§7) mide las que puede —los pesos, el almacén y el modelo—; el runtime del sistema no lo mide, porque la prueba usa una imagen de contenedor que trae además la base y las librerías CUDA y ROCm.
 
 | Elemento | Por qué hace falta | Orden de magnitud | Copia |
 |---|---|---|---|
@@ -130,7 +130,7 @@ El cliente no necesita cambiar de aplicación: necesita un perfil que apunte a `
 
 Ese perfil no se versiona: `opencode.json` está en `.gitignore`. Lo que queda en el repositorio es el fragmento documentado, y el fichero real hay que copiarlo al disco externo junto con el resto del inventario. Si se pierde, se reconstruye desde el fragmento, sin las claves.
 
-Lo que hay que comprobar y todavía no está comprobado en este repositorio: **si el cliente arranca sin red**. Un cliente puede funcionar contra el modelo local y aun así consultar en el arranque un catálogo o una sesión de cuenta. Esa comprobación es parte del simulacro, no una suposición.
+Lo que quedaba por comprobar era **si el cliente arranca sin red**. Un cliente puede funcionar contra el modelo local y aun así consultar en el arranque un catálogo o una sesión de cuenta. El simulacro del 22 de noviembre lo comprobó con OpenCode contra la API local en una red sin salida: arranca y completa una tarea, y tardó 124 s contando el arranque del cliente. El detalle y los límites están en el [experimento](../experimentos/2026-11-22-simulacro-continuidad-ia-local/README.md).
 
 ## 6. Qué se puede hacer con cada tamaño
 
@@ -146,9 +146,11 @@ La velocidad es una expectativa, no una medición: cuanto más reparte entre GPU
 
 Un modelo local no sustituye al remoto grande. La continuidad no devuelve la misma capacidad: devuelve la posibilidad de seguir trabajando con menos criterio externo y más tuyo. Decirlo es parte del plan; venderlo como «sigo igual» sería falso.
 
-## 7. Simulacro (pendiente)
+## 7. Simulacro
 
-Lo que convierte esto en evidencia y no en intención. No ejecutado todavía.
+Lo que convierte esto en evidencia y no en intención.
+
+Ejecutado el 2026-11-22. El [experimento](../experimentos/2026-11-22-simulacro-continuidad-ia-local/README.md) recoge las cifras y cuatro desviaciones que conviene leer antes que el resultado: el servidor del montaje no estaba en la red y su inventario sigue abierto; el corte se hizo en una red Docker interna, no con `nftables` sobre el equipo; el modelo fue `qwen2.5:3b`, no el `qwen2.5-coder:7b` del paso 3, que no está descargado; y el cliente fue OpenCode contra la API local, no el perfil de Continue del paso 4. El criterio de paso se cumplió en esa forma —el modelo respondió sin red y el cliente completó una tarea—, no sobre el montaje original. Los pasos de abajo siguen siendo el procedimiento.
 
 1. Comprobar qué queda del montaje anterior: `ollama list`, `sha256` de la línea `FROM` (§3) y tamaños reales (§2). Si el servidor conserva los modelos, no hay que reinstalar nada; si no, hace falta una ventana con red para recuperar runtime y pesos. Ese dato es lo primero que el simulacro tiene que dejar claro.
 2. Cortar solo la salida a Internet del equipo cliente, sin tocar la red de laboratorio ni SSH. Con `nftables`, y sustituyendo las redes de ejemplo por las del laboratorio:
