@@ -10,6 +10,8 @@
 
 > **Corrección (2026-11-22).** Este experimento se ejecutó sobre un diseño que repartía roles al reclamar —`principal` el primero, `delta` los siguientes— y un cierre que aplicaba esos deltas. Ese reparto se retiró el 2026-11-19: hoy cada sesión cierra su propio ítem y el cierre solo serializa la escritura del estado compartido. Los artefactos y las salidas no se tocan, porque son lo que se ejecutó. El rol de §3, la hipótesis 4, la columna de `c4` y las menciones al delta en esta página describen el diseño de entonces, no el vigente; lo que prueban la primitiva atómica, el tope, el ítem por sesión, la caducidad que no libera y la caída con `SIGKILL` no depende del rol y se mantiene.
 
+> **Medición repetida (2026-11-22).** El mismo `primitiva.sh`, sobre el binario del sistema —que sigue siendo uutils 0.10.0—, dio 113 de 200 rondas con dos creadores; sobre la llamada al sistema (`os.mkdir` de Python), 0 de 200 en dos pasadas. La cifra del binario no es estable entre pasadas —11 el 19/11, 113 ahora—, que es lo que justifica mirar 200 rondas y no una. El cerrojo que serializa la escritura del estado compartido pasó a crear con la llamada al sistema; dos tomas simultáneas en 100 rondas no dieron ninguna doble.
+
 Dos sesiones que trabajan a la vez sobre la misma cola se pisan igual que dos personas que escriben en la misma libreta sin mirar si la otra ya tiene el bolígrafo. No hace falta que se pongan de acuerdo en todo: basta con que ninguna empiece sin haber cogido su hoja. Esta página mide si ese gesto —coger la hoja— es suficiente para que no haya dos manos en el mismo renglón.
 
 ## 1. Metadatos
