@@ -50,7 +50,7 @@ Queda fuera: rankings de modelos, *AI red teaming* genérico, certificaciones, R
 
 ## 4. Dependencias y orden
 
-1. Cerrar la Fase 0 antes de añadir páginas nuevas.
+1. Cerrar la Fase 0 antes de añadir páginas nuevas a esta hoja de ruta o a sus experimentos. Cualquier otra página nueva que entre en el repositorio tiene que cumplir, al fusionarse, los criterios de salida de la Fase 0: sin rutas privadas, sin enlaces rotos y sin estados contradictorios.
 2. Cerrar la Fase 1 antes de los experimentos: sin modelo reproducible y sin endpoint controlado, las pruebas no son comparables.
 3. Ejecutar 1 → 2 → 3. La frontera de datos informa qué cliente y qué endpoint se usan; la inyección necesita ese cliente; los permisos necesitan el mismo entorno.
 4. No abrir RAG, *squad*, despliegues en contenedores ni comparativas de modelos hasta cerrar la Fase 4. Son líneas legítimas, pero no sostienen el eje. Queda fuera de esa espera el mecanismo de aislamiento del agente que ejecuta —usuario, capacidades, sistema de archivos, red y credenciales—: no depende de un modelo reproducible y se mide por separado.

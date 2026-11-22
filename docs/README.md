@@ -25,6 +25,7 @@ Marcos de evaluación, decisiones y comparativas.
 | Documento | Qué aporta |
 |---|---|
 | [`programacion-agentica.md`](referencia/programacion-agentica.md) | Marco: qué es, dónde paga, qué riesgos añade y qué controles la hacen defendible; con los experimentos del laboratorio |
+| [`autonomia-desatendida.md`](referencia/autonomia-desatendida.md) | Cuándo arranca un evento en lugar de una persona: cuatro niveles, cinco frenos, arquitectura de referencia y qué no se delega |
 | [`skills-de-agente.md`](referencia/skills-de-agente.md) | Qué es una skill, qué aporta sobre lo que ya hay y por qué no compensa en estos repositorios |
 | [`hoja-de-ruta-seguridad-asistentes.md`](referencia/hoja-de-ruta-seguridad-asistentes.md) | Frontera de datos, inyección desde el repositorio y permisos; fases y criterios de salida |
 | [`ai-security-evaluation.md`](referencia/ai-security-evaluation.md) | Evaluación de calidad y seguridad de funciones con LLM: conjunto dorado, inyección, métricas y CI |
