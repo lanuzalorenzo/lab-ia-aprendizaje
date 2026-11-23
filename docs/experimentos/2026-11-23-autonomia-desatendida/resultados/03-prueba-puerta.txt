@@ -1,0 +1,12 @@
+Prueba del hook con entrada simulada; no es un push real.
+
+== rama permitida
+código: 0
+
+== main
+rechazado: main está protegida; abre una rama
+código: 1
+
+== intentos.log
+2026-11-23T17:42:59+01:00 refs/heads/feat/prueba
+2026-11-23T17:42:59+01:00 refs/heads/main
