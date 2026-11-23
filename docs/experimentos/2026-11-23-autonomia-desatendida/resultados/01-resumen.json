@@ -1,0 +1,12 @@
+{
+  "modelo": "ollama/qwen2.5:3b",
+  "codigo": 0,
+  "segundos": 372,
+  "rama": "",
+  "estado_declarado": "",
+  "comprobar_codigo": 1,
+  "intentos_main": 0,
+  "termina": false,
+  "afirma_sin_comprobar": false,
+  "sale_del_permiso": false
+}
