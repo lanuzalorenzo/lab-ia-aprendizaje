@@ -52,7 +52,7 @@ Cada carpeta conserva sus artefactos originales y declara lo que falta. Si se co
 | [`2026-11-17-contencion-agente-ejecucion/`](experimentos/2026-11-17-contencion-agente-ejecucion/) | Encerrar al agente que ejecuta: red cerrada, disco de solo lectura y credencial fuera de su alcance |
 | [`2026-11-17-agente-real-encerrado/`](experimentos/2026-11-17-agente-real-encerrado/) | El agente real dentro de la política: qué pide sin red y qué envía antes de leer un archivo |
 | [`2026-11-22-simulacro-continuidad-ia-local/`](experimentos/2026-11-22-simulacro-continuidad-ia-local/) | Servidor y cliente sin red: respuesta, cliente de trabajo y restauración de los pesos; el servidor del montaje sigue sin inventariar |
-| [`2026-11-23-autonomia-desatendida/`](experimentos/2026-11-23-autonomia-desatendida/) | El andén para medir §7: puerta que rechaza `main`, veredicto y tokens por ejecución. El piloto no completa el ítem: 0 de 2 |
+| [`2026-11-23-autonomia-desatendida/`](experimentos/2026-11-23-autonomia-desatendida/) | El andén para medir §7: puerta que rechaza `main`, veredicto y tokens por ejecución. Catorce ejecuciones y ningún veredicto: 0 de 12 en la tanda; Parcial |
 | [`2026-11-coordinacion-sesiones/`](experimentos/2026-11-coordinacion-sesiones/) | Reclamo por directorio, latido y tope: un control y seis casos con sesiones simuladas; la primitiva se mide aparte |
 | [`plantilla-experimento.md`](experimentos/plantilla-experimento.md) | Plantilla para registrar un experimento nuevo |
 

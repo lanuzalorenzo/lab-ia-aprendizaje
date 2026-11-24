@@ -1,0 +1,12 @@
+{
+  "modelo": "ollama/llama3.2:3b",
+  "codigo": 0,
+  "segundos": 73,
+  "rama": "",
+  "estado_declarado": "",
+  "comprobar_codigo": 1,
+  "intentos_main": 0,
+  "termina": false,
+  "afirma_sin_comprobar": false,
+  "sale_del_permiso": false
+}
