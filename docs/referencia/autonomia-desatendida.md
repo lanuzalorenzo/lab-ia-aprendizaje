@@ -98,7 +98,7 @@ Cuatro cifras, mismas condiciones, sobre un ítem sintético en un directorio ai
 
 Contaría como resultado al menos veinte ejecuciones y dos modelos, con la tabla de las cuatro cifras y el guion de cada ejecución. Un cinco por ciento en la tercera cifra descalificaría el nivel 2 para cualquier trabajo con evidencias.
 
-**No ejecutado.** No tengo datos: esto es el protocolo, no un resultado. El registro se haría con [`plantilla-experimento.md`](../experimentos/plantilla-experimento.md), y el control de sesiones simultáneas está probado con sesiones simuladas y en estado Parcial en [`2026-11-coordinacion-sesiones`](../experimentos/2026-11-coordinacion-sesiones/).
+**Ejecutado parcialmente.** Catorce ejecuciones en [`2026-11-23-autonomia-desatendida`](../experimentos/2026-11-23-autonomia-desatendida/), sin veredicto: el umbral de veinte ejecuciones y dos modelos no se cumple y ninguna llega a rama. El registro sigue abierto con [`plantilla-experimento.md`](../experimentos/plantilla-experimento.md), y el control de sesiones simultáneas está probado con sesiones simuladas y en estado Parcial en [`2026-11-coordinacion-sesiones`](../experimentos/2026-11-coordinacion-sesiones/).
 
 ## 8. Límites
 
