@@ -2,9 +2,9 @@
 
 # Portfolio de aprendizaje en IA
 
-Aprendo IA probando: levanto una herramienta, la uso en trabajo real y anoto qué sale. Empecé con un servidor propio y Ollama para no sacar datos de la red; hoy hay guías de agentes, experimentos con resultado y criterios sobre qué dato cruza la frontera. Nada de rankings ni comparativas sin medición.
+Aprendo IA probando: uso cada herramienta en trabajo real y anoto qué sale. Empecé con un servidor propio y Ollama para no sacar datos de la red; hoy hay guías de agentes, experimentos y criterios sobre la frontera de datos. Nada de rankings sin medición.
 
-> **Cómo se lee el estado.** Cada experimento y cada resultado declara el suyo en su ficha; las guías no llevan estado. **Validado** significa que se ejecutó y hay resultado observado. Un hallazgo no es un PASS.
+> **Cómo se lee el estado.** Cada experimento declara el suyo en su ficha; las guías no llevan estado. **Validado** significa que se ejecutó y hay resultado observado. Un hallazgo no es un PASS.
 
 ## Guías
 
@@ -15,21 +15,23 @@ Aprendo IA probando: levanto una herramienta, la uso en trabajo real y anoto qu�
 
 ## Experimentos
 
-- **Robustez:** con `qwen2.5:3b`, una orden escondida se obedece sin disfraz; endurecer el prompt no baja la obediencia (0,50).
-- **Coste:** el 98% de la entrada es relectura de caché.
-- **OpenCode:** arranca, lee el repositorio y escribe.
-- **7B con Continue:** funciona y va lento; sin métricas.
+- **Robustez:** `qwen2.5:3b` obedece la orden directa sin disfraz; el prompt endurecido no la mueve (0,50).
+- **Contención:** red cerrada, disco de solo lectura y credencial fuera; el agente real, dentro, envía 24 KB antes de leer.
+- **Autonomía:** un banco mide si un modelo local sube una rama sin tocar `main`: 0 veredictos en 14 ejecuciones.
+- **Coste:** 98% de la entrada es relectura de caché.
 
-Cada uno abre con qué probé, qué salió y qué no está medido. Índice: [`docs/README.md`](docs/README.md).
+Cada ficha dice qué probé, qué salió y qué falta medir. Índice: [`docs/README.md`](docs/README.md).
 
 ## Criterio
 
-- **Hardware:** qué modelo cabe en cada memoria, qué velocidad se puede esperar y cuándo compensa comprar el equipo frente a pagar por uso ([dimensionado](docs/referencia/dimensionado-hardware-ia-local.md)).
+- **Hardware:** qué modelo cabe en cada memoria y cuándo compensa el equipo ([dimensionado](docs/referencia/dimensionado-hardware-ia-local.md)).
+- **Autonomía:** cuatro niveles y cinco frenos para delegar sin persona delante ([autonomía](docs/referencia/autonomia-desatendida.md)).
 
 ## Antes de usarlo
 
-- Ollama no escucha en `0.0.0.0` sin firewall; el `11434` no se abre a Internet.
+- Ollama: firewall cerrado, `11434` sin abrir a Internet.
+- Al agente que ejecuta: sin red y credencial fuera.
 - La clave va en el entorno, no en `opencode.json`.
 - Al proveedor remoto no le mandes secretos ni datos personales.
 
-Criterios completos: [hoja de ruta de seguridad](docs/referencia/hoja-de-ruta-seguridad-asistentes.md). Licencia: MIT.
+Criterios: [hoja de ruta de seguridad](docs/referencia/hoja-de-ruta-seguridad-asistentes.md). Licencia: MIT.
